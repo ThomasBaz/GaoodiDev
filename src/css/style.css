@@ -1,0 +1,358 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #DDDEDE;
+}
+
+nav {
+	display: inline;
+}
+
+header {
+	height: 2.5em;
+	background-color: #4095d5;
+	padding-top: 0.5%; 
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+ul {
+	list-style-type: none; 
+    display: inline;
+    width: 75%;
+}
+
+li {
+	float: left;
+    padding-right: 3%;
+}
+
+li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+h1 {
+	margin: 0;
+	padding-left: 20%;
+	color: #fff;
+	line-height: 30px;
+	font-family: 'Roadway';
+	font-weight: normal;
+	font-size: 1.7em;
+}
+
+h2 {
+	text-align: center;
+	margin: 0;
+	font-size: 2em;
+}
+
+h3, h4, p {
+	text-align: center;
+	margin: 0;
+}
+
+h5 {
+	margin-top: 0.7em;
+	margin-bottom: 0.5em;
+}
+
+section {
+	padding-bottom: 2em;
+}
+section.provider {
+	padding-left: 15%;
+	padding-right: 15%;
+	background-color: #FFFFFF;
+}
+
+section:first-child {
+	background-image: url("../img/couv_V3_1920.png");
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #555555;
+	padding-top: 2%;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+h2, p {
+	color: #fff;
+}
+
+h2, h4 {
+	margin-bottom: 1%;
+}
+
+button {
+	background: #4095d5;
+	color: #fff;
+	border-radius: 4px;
+	border: 1px solid #4095d5;
+	padding: 5%;
+	font-weight: bold;
+	box-shadow: 0px 0px 5px #000;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #fff;
+	color: #4095d5;
+}
+
+figure {
+	margin: 2% 10%;
+	width: 13%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+figure img {
+	width: 60%;
+	margin: 0 20%;
+}
+
+figcaption {
+}
+
+figcaption p {
+	color: #305664;
+	font-size: 0.8rem;
+}
+
+h3, h4 {
+	color: #305664;
+}
+
+h4 {
+	margin-bottom: 5%;
+}
+
+section:nth-child(3) {
+	background: #4095d5;
+}
+
+section:nth-child(3) button {
+	background: #fff;
+	color: #4095d5;
+	margin: 2% 45%;
+	padding: 0.5% 1%;
+}
+
+section img {
+	width: 15%;
+	margin: 0 auto;
+	margin-bottom: 1em;
+}
+
+footer {
+	padding: 1em;
+	line-height: auto;
+	background-color: #FFFFFF;
+}
+
+.first, .second {
+	width: 30%;
+	display: inline-block;
+	vertical-align: center;
+}
+
+.first p {
+	color: #305664;
+}
+
+.second {
+	margin-left: 25%;
+}
+
+.second img {
+	width: 5%;
+	display: inline-block;
+	vertical-align: center;
+	margin: 0 0.5%;
+}
+
+.contactBox {
+	background-color: #B3B3B3;
+	padding: 1em;
+	width: fit-content;
+	text-align: center;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.2em;
+    padding: 2em;
+    display: block;
+}
+
+.alignLeft {
+	text-align: left;
+	margin-bottom: 0.2em;
+}
+
+.mgtop {
+	margin-top: 1em;
+}
+
+.provider {
+	display: inline-block;
+}
+
+.textBloc {
+	width: 30%;
+	text-align: center;
+	margin-top: 2.5%;
+	margin-left: 2.5%;
+    margin-right: auto;
+}
+
+.anElemForm {
+	display: inline-block;
+	white-space: nowrap;
+	margin-bottom: 1em;
+	font-family: 'MyriadPro';
+	width: 100%;
+}
+
+.blue-btn {
+	background: #4095d5;
+	color: #fff;
+	border-radius: 4px;
+	border: 1px solid #4095d5;
+	padding: 0.5% 2%;
+	font-weight: bold;
+	box-shadow: 0px 0px 5px #000;
+	cursor: pointer;
+}
+
+.normalPadding {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.flag {
+	padding-top: 1%;
+	float: right;
+	height: 1.8em;
+	width: 1.4em;
+}
+
+.Roadway {
+	font-family: 'Roadway';
+}
+
+.MyriadPro {
+	font-family: 'MyriadPro';
+}
+
+.MyriadProReg {
+	font-family: 'MyriadProReg';
+}
+
+.MyriadProSemiB {
+	font-family: 'MyriadProSemiB';
+}
+
+.totalWidth {
+	width: 100%;
+}
+
+.whiteText {
+	color: white;
+}
+
+
+input#male {
+	margin-left: 3em;
+}
+
+#titleForm {
+	display: inline-block;
+	white-space: nowrap;
+	font-family: 'MyriadPro';
+	font-size: 2em;
+	width: 100%;
+	margin-bottom: none
+}
+
+#share {
+	margin-left: 30%;
+}
+
+#fakeVid {
+	width: 600px;
+	height: 380px;
+}
+
+#vidPlusBtn {
+	display: block;
+	margin-top: 3%;
+	margin-left: 15%;
+	width: fit-content;
+	height: fit-content;
+}
+
+#btnVid {
+	margin-left: 30%;
+	margin-top: 2em;
+	padding: 1em;
+}
+
+#day, #month, #year {
+	border-radius: 4px;
+	padding: 0.8em;
+}
+
+#gender {
+	width: 100%;
+	border-radius: 4px;
+	font-family: MyriadProReg;
+	border-style: none;
+	margin-bottom: 0.9em
+}
+
+#name, #mail {
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
+	width: 100%;
+	border-radius: 4px;
+	font-family: MyriadProReg;
+	border-style: none;
+	margin-bottom: 0.9em
+}
+
+#date, #nationality, #corres {
+	width: 100%;
+	padding: 0.8em;
+	border-radius: 4px;
+	font-family: MyriadProReg;
+	border-style: none;
+	margin-bottom: 0.9em
+}
+
+@font-face {
+	font-family: 'Roadway';
+	src: url('../font/ROADWAY_.ttf');
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../font/MyriadPro-BoldCond.otf');
+}
+
+@font-face {
+	font-family: 'MyriadProReg';
+	src: url('../font/MyriadPro-Regular.otf');
+}
+
+@font-face {
+	font-family: 'MyriadProSemiB';
+	src: url('../font/MyriadPro-Semibold.otf');
+}

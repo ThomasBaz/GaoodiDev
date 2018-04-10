@@ -1,0 +1,15 @@
+.containerVidPres {
+	position: relative;
+	background-color: #F2F5F7;
+	height: 400px;
+	width: 100%;
+}
+
+#VidPres {
+	height: 310px;
+	width: 550px;
+	border: 3px solid black;
+	position: absolute;
+	top: 40px;
+	left: 45%;
+}

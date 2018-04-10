@@ -1,0 +1,105 @@
+.PersonalInformationsContainer {
+	display: flex;
+	width: 50%;
+	padding-left: 25%;
+	padding-right: 25%;
+	flex-direction: column;
+	/*-webkit-align-items: center;
+    align-items: center;*/
+    justify-content: center;
+	color: #565355;
+	flex-direction: column;
+}
+
+.PersonalInformationsLine, .informationsLineWithBorder {
+	display: inline-flex;
+	flex-direction: row;
+}
+
+.PersonalInformationsMP {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.PersonalInformationsLine p {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.TitleAndLine {
+	width: 100%;
+	font-family: 'MyriadProSemiB';
+	color: black;
+	font-size: 20px;
+	text-align: left;
+    line-height: 35px;
+    box-shadow: 0 15px 0 0 #fff inset, 0 17px 0 0 Silver inset;
+}
+
+.TitleAndLine span {
+    background-color:#fff;
+    padding-left : 0px;
+    padding-right: 40px;
+}
+
+.PersonalInformationsName {
+	color: #686666;
+	width: 60%;
+}
+
+.PersonalInformationsValue {
+	color: #b1b1b6;
+	width: 40%;
+}
+
+.PersonalInformationsContainer button {
+	display: flex;
+	font-family: 'MyriadProReg';
+	font-size: 15px;
+	height: 70%;
+	background: #4095d5;
+	color: #fff;
+	border-radius: 3px;
+	border: 1px solid #4095d5;
+	cursor: pointer;
+	justify-content: center;
+	padding-top: 3px;
+}
+
+.PersonalInformationsContainer button:hover {
+	background: #fff;
+	color: #4095d5;
+	border: 1px solid #4095d5;
+}
+
+.PersonalInformationsModifyBtn {
+	display: inline-flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+.resBtn {
+	width: 190px;
+}
+
+.PersonalInformationsModifyBtn button {
+	width: 67px;
+	justify-content: flex-end;
+}
+
+.smallTxt {
+	font-family: 'MyriadProReg';
+	color: #b1b1b6;
+	font-size: 12px;
+	padding-bottom: 20px;
+}
+
+.informationsLineWithBorder {
+	border: solid #b1b1b6 1px;
+	border-radius: 4px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding-left: 5px;
+}

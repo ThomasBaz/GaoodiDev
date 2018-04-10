@@ -1,0 +1,31 @@
+.PgrComponent {
+	display: block;
+	width: 350px;
+	margin: 30px;
+}
+
+.PgrComponent img {
+	height: 100px;
+	display: block;
+	margin: auto;
+}
+
+.PgrComponent .title {
+	text-align: center;
+	font-size: 30px;
+	font-family: 'MyriadPro';
+}
+
+.PgrComponent .subTitle {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'MyriadProSemiB';
+	padding-bottom: 10px;
+}
+
+.PgrComponent .text {
+	text-align: left;
+	font-size: 20px;
+	font-family: 'MyriadProReg';
+    text-justify: inter-word;
+}

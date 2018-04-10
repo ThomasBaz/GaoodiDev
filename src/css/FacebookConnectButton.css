@@ -1,0 +1,25 @@
+.facebookButton {
+	font-family: 'MyriadProReg';
+	font-size: 13px;
+	background: #4095d5;
+	color: #fff;
+	border-radius: 3px;
+	border: 1px solid #4095d5;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 2px;
+	padding-left: 2px;
+	cursor: pointer;
+	vertical-align: center;
+	width: 100%;
+}
+
+.facebookButton:hover {
+	background: #fff;
+	color: #4095d5;
+}
+
+.facebookButton img {
+	border-top: 5px;
+	padding-right: 5px;
+}

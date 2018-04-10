@@ -1,0 +1,93 @@
+.aSummaryRow {
+	padding-bottom: 10px;
+	cursor: pointer;
+	color: #565355;
+	text-decoration: none;
+}
+
+.aSummaryRow:hover {
+	color: grey;
+}
+
+#FAQContainer {
+	display: flex;
+	flex-direction: column;
+	-webkit-align-items: center;
+    align-items: center;
+	color: #565355;
+}
+
+#FAQContainer a {
+	text-decoration: none;
+}
+
+#FAQTitle {
+	font-family: 'MyriadProSemiB';
+	font-size: 30px;
+	width: 60%;
+	text-align: left;
+	padding-top: 70px;
+	padding-bottom: 50px;
+}
+
+#FAQSummary {
+	font-family: 'MyriadProSemiB';
+	font-size: 17px;
+	width: 55%;
+	padding-bottom: 20px;
+}
+
+.divImg {
+	width: 100%;
+	display: flex;
+	-webkit-align-items: center;
+    justify-content: center;
+}
+
+.regPadLef {
+	padding-left: 20px;
+}
+
+.italBold {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.noMargin {
+	margin: 0px;
+}
+
+#answerContainer {
+	width: 60%;
+	text-align: left;
+}
+
+#answerContainer a {
+	font-family: 'MyriadProSemiB';
+	font-size: 22px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+#answerContainer p {
+	font-family: 'MyriadProReg';
+	font-size: 20px;
+}
+
+#answerContainer div p {
+	font-family: 'MyriadProReg';
+	font-size: 20px;
+	margin: 0px;
+}
+
+.divImg img {
+	height: auto;
+	width: 50%;
+}
+
+.smallImg {
+	height: 20px;
+}
+
+
+

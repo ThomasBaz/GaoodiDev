@@ -1,0 +1,168 @@
+nav {
+	display: inline-block;
+}
+
+.HeadSectionContainer {
+	display: flex;
+	align-items: center;
+	/*flex-wrap: wrap;*/
+	height: auto;
+	width: 100%;
+	background-color: #4095d5;
+}
+
+.HeadSectionContainer p {
+	margin: 0;
+	padding-left: 22%;
+	padding-right: 25%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #fff;
+	line-height: 30px;
+	font-family: 'Roadway';
+	font-weight: normal;
+	font-size: 35px;
+	text-align: center;
+}
+
+.formContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 20px;
+}
+
+.HeadSectionContainer form {
+	/*display: inline-block;*/
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.HeadSectionContainer select {
+	/*display: inline-block;*/
+    vertical-align: middle;
+    line-height: 40px;
+	height: 25px;
+	width: 35px;
+	border-radius: 5px;
+	background-color: #F2F5F7;
+	color: #5E5F5F;
+	border: none;
+	margin-right: 35px;
+}
+
+.HeadSectionContainer option {
+	border: none;
+	border-radius: 5px;
+}
+
+.connectionInput {
+	margin-right: 12px;
+	width: 120px;
+	font-family: 'MyriadProReg';
+	padding: 2px 2px 2px 2px;
+}
+
+#buttonConnect {
+	font-family: 'MyriadProReg';
+	font-size: 15px;
+	background: #F2F5F7;
+	color: #5E5F5F;
+	border-radius: 3px;
+	border: none;
+	cursor: pointer;
+	margin-right: 35px 
+}
+
+#buttonConnect:hover {
+	background: #5E5F5F;
+	color: #F2F5F7;
+}
+
+#FAQ {
+	font-family: 'MyriadProSemiB';
+	font-size: 15px;
+	color: #4095d5;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #4095d5;
+	padding: 5px 5px 3px 5px;
+	cursor: pointer;
+}
+
+#FAQ:hover {
+	color: #fff;
+	background: #4095d5;
+	border: 1px solid white;
+}
+
+.selector {
+	height: 20px;
+	width: 30px;
+	border: solid 1px;
+	border-radius: 4px;
+	position: relative;
+	background: #F2F5F7;
+	color: #5E5F5F;
+	display: flex;
+	margin-right: 25px
+}
+ 
+.selector:hover {
+	background: #5E5F5F;
+	color: #F2F5F7;
+}
+ 
+.flagPart {
+	width: 17px;
+	border-style: solid;
+	height: 100%;
+	border-width: 0px 1px 0px 0px;
+}
+ 
+.flagPart img {
+	width: 15px;
+	height: 65%;
+	padding: 3px 1px 3px 1px
+}
+ 
+.arrowPart {
+	position: relative;
+	width: 12px;
+	height: 9px;
+	height: 100%;
+}
+ 
+.aChoice {
+	height: 50%
+}
+ 
+.aChoice:hover {
+	background: #5E5F5F;
+	color: #F2F5F7;
+}
+
+.dispRel {
+	position: relative;
+}
+ 
+#choice {
+	height: 40px;
+	width: 30px;
+	border: solid 1px;
+	border-radius: 3px;
+	background: #F2F5F7;
+	color: #5E5F5F;
+	position: absolute;
+	display: block;
+	z-index: 2;
+	right: 0px;
+	top: 20px;
+}
+ 
+#choice img {
+	width: 15px;
+	height: 12px;
+	padding: 3px 1px 1px 6px
+}
+

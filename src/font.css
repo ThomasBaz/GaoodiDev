@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Roadway';
+	src: url('../font/ROADWAY_.ttf');
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../font/MyriadPro-BoldCond.otf');
+}
+
+@font-face {
+	font-family: 'MyriadProReg';
+	src: url('../font/MyriadPro-Regular.otf');
+}
+
+@font-face {
+	font-family: 'MyriadProSemiB';
+	src: url('../font/MyriadPro-Semibold.otf');
+}
+
+.Roadway {
+	font-family: 'Roadway';
+}
+
+.MyriadPro {
+	font-family: 'MyriadPro';
+}
+
+.MyriadProReg {
+	font-family: 'MyriadProReg';
+}
+
+.MyriadProSemiB {
+	font-family: 'MyriadProSemiB';
+}
