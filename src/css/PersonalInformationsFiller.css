@@ -1,0 +1,63 @@
+.PersonalInformationsFillerContainer {
+	display: flex;
+	width: 50%;
+	padding-left: 25%;
+	padding-right: 25%;
+	flex-direction: column;
+    justify-content: center;
+	color: #565355;
+	margin: auto;
+}
+
+.firstBlockInfoContainer {
+	display: flex;
+	border: solid black 2px;
+	width: 100%;
+	height: auto;
+	flex-direction: column;
+	margin-bottom: 25px;
+	padding: 5px;
+}
+
+.blockInfoContainer {
+	display: flex;
+	border: solid black 1px;
+	border-radius: 2px;
+	width: 100%;
+	height: auto;
+	border-left: 25%;
+	border-right: 25%;
+	flex-direction: column;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+.bigTitlePersonalInformationsFiller {
+	font-family: 'MyriadProSemiB';
+	color: #4d555a;
+	padding-bottom: 7px;
+	font-size: 19px;
+}
+
+.titlePersonalInformationsFiller {
+	font-family: 'MyriadProSemiB';
+	color: #111111;
+	padding: 5px 0px 10px 5px;
+}
+
+.bigTextPersonalInformationsFiller {
+	font-family: 'MyriadProReg';
+	color: #686666;
+}
+
+.textPersonalInformationsFiller {
+	font-family: 'MyriadProReg';
+	color: #686666;
+}
+
+.PersonalInformationsStandartLine {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 10px;
+}

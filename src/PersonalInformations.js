@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/PersonalInformations.css';
+import './css/PersonalInformationsFiller.css';
 
 class PersonalInformationsLine extends React.Component {
 	constructor(props) {

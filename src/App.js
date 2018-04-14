@@ -10,6 +10,7 @@ import Faq from './Faq.js';
 import ModifyMP from './ModifyMP.js';
 import ContactForm from './ContactForm.js';
 import PersonalInformations from './PersonalInformations.js';
+import PersonalInformationsFiller from './PersonalInformationsFiller.js';
 import TerminateContract from './TerminateContract.js';
 
 
@@ -80,6 +81,7 @@ class App extends Component {
         <ContactForm/>
         <ModifyMP />
         <PersonalInformations/>
+        <PersonalInformationsFiller locale={this.state.locale}/>
         <TerminateContract locale={this.state.locale} terminationType={'definitively'}/>
       </div>
     );
