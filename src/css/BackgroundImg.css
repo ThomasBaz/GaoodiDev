@@ -1,0 +1,32 @@
+.BackgroundImgContainer {
+    width: 100%;
+    height: 250px;
+    margin-top: 30px;
+    background-color: #ebeff2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NewBg {
+    display: flex;
+    font-family: 'MyriadProSemiB';
+    flex-direction: row;
+    color: #4095d5;
+    cursor: pointer;
+}
+
+.NewBg:hover {
+    color: #8ab8db;
+}
+
+.NewBg img {
+    max-width: 26px;
+    height: 16px;
+    padding-right: 5px;
+}
+
+.NewBg > input
+{
+    display: none;
+}
