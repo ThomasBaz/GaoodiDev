@@ -36,11 +36,11 @@ class BackgroundImg extends React.Component {
 		return(
 			<div className="BackgroundImgContainer">
                 <div className='NewBg'>
-                    <label onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave} className='NewBg' for="file-input">
+                    <label onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave} className='NewBg' htmlFor="file-input">
                         <img src={this.state.url}/>
                         {fullText[this.props.locale].text}
                     </label>
-                    <input id="profile_img_input" type="file"/>
+                    <input id="file-input" type="file"/>
                 </div>
 			</div>
 		);

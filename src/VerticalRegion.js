@@ -18,7 +18,7 @@ class VerticalRegion extends React.Component {
 		
 		return(
 			<div className="VerticalRegionContainer">
-				<ImgProfile profileImg="img/150/langue_eng_150.png"/>
+				<ImgProfile profileImg={null}/>
 				<div className="vertTitle">Prenom. N</div>
 				<div className="vertSubTitle">Pays - Ville</div>
 				<div className="vertInfo">info</div>
@@ -67,7 +67,7 @@ class ImgProfile extends React.Component {
 		} else {
 			img = (
 				<div className="blueCircle" >
-					<label onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave} className='NewBg' for="file-input">
+					<label onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave} className='NewBg' htmlFor="profile_img_input">
 						<img src={this.state.url}/>
 					</label>
 					<input id="profile_img_input" type="file"/>
