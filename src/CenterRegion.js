@@ -85,8 +85,14 @@ class MatchInfos extends React.Component {
 	render() {
 		const fullText = {
 			'fr': {
+				ask: 'Demande de correspondant',
+				founded: 'Match trouvé',
+				validated: 'Match validé'
 			},
 			'en':  {
+				ask: 'Correspondent\'s request',
+				founded: 'Founded matches',
+				validated: 'Validated matches'
 			}
 		}
 		
