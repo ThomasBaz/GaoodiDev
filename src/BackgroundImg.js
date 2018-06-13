@@ -8,7 +8,11 @@ class BackgroundImg extends React.Component {
         super(props);
                 
 		this.state = {
+<<<<<<< HEAD
             "hover": false
+=======
+            "url": 'img/120/icone_photo.png'
+>>>>>>> 386df78846c4a41d26a3a5ba7f28da415ed0aac6
         }
         
 		this.handleEnter = this.handleEnter.bind(this);
@@ -16,11 +20,19 @@ class BackgroundImg extends React.Component {
     }
     
     handleLeave() {
+<<<<<<< HEAD
         this.setState({hover: false});
     }
 
     handleEnter() {
         this.setState({hover: true});
+=======
+        this.setState({url: 'img/120/icone_photo.png'});
+    }
+
+    handleEnter() {
+        this.setState({url: 'img/120/icone_photo_click.png'});
+>>>>>>> 386df78846c4a41d26a3a5ba7f28da415ed0aac6
     }
 
 	render() {
@@ -37,8 +49,12 @@ class BackgroundImg extends React.Component {
 			<div className="BackgroundImgContainer">
                 <div className='NewBg'>
                     <label onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave} className='NewBg' htmlFor="file-input">
+<<<<<<< HEAD
                         <img src='img/120/icone_photo_click.png' style={{display: this.state.hover ? 'block' : 'none' }}/>
                         <img src='img/120/icone_photo.png' style={{display: this.state.hover ? 'none' : 'block' }}/>
+=======
+                        <img src={this.state.url}/>
+>>>>>>> 386df78846c4a41d26a3a5ba7f28da415ed0aac6
                         {fullText[this.props.locale].text}
                     </label>
                     <input id="file-input" type="file"/>
