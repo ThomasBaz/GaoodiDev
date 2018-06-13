@@ -86,7 +86,7 @@ class FormSection extends React.Component {
 				<input className="input" type="text" placeholder={text.mail} onChange={this.handleEmailChange} />
 				<input className="input" type="text" placeholder={text.name} onChange={this.handleFirstNameChange} />
 				<input className="input" type="text" placeholder={text.familyName} onChange={this.handleFamilyNameChange} />
-				<input className="input" type="text" placeholder={text.password} onChange={this.handlePasswordChange} />
+				<input className="input" type="password" placeholder={text.password} onChange={this.handlePasswordChange} />
 				<input className="button" type="submit" value={text.submit} />
 			</form>
 		);

@@ -10,7 +10,9 @@ import Faq from './Faq.js';
 import ModifyMP from './ModifyMP.js';
 import ContactForm from './ContactForm.js';
 import PersonalInformations from './PersonalInformations.js';
+import PersonalInformationsFiller from './PersonalInformationsFiller.js';
 import TerminateContract from './TerminateContract.js';
+import Profile from './Profile.js';
 
 
 class App extends Component {
@@ -65,7 +67,7 @@ class App extends Component {
       }
     }
 
-    return (
+    return (/*
       <div>
         <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale}/>
         <div id="imgContainer">
@@ -80,7 +82,12 @@ class App extends Component {
         <ContactForm/>
         <ModifyMP />
         <PersonalInformations/>
+        <PersonalInformationsFiller locale={this.state.locale}/>
         <TerminateContract locale={this.state.locale} terminationType={'definitively'}/>
+      </div>*/
+      <div>
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale}/>
+        <Profile locale={this.state.locale}/>
       </div>
     );
   }

@@ -39,7 +39,6 @@ class HeadSection extends React.Component {
 		let style = {
 			'display': this.state.display
 		}
-		//let text = fullText[this.props.locale];
 
 		return (
 			<nav className='HeadSectionContainer'>
@@ -47,7 +46,7 @@ class HeadSection extends React.Component {
 				<div className="formContainer">
 					<form >
 						<input className="connectionInput" type="text" placeholder={this.props.text.mail} onChange={this.handleEmailChange} />
-						<input className="connectionInput" type="text" placeholder={this.props.text.password} onChange={this.handlePasswordChange} />
+						<input className="connectionInput" type="password" placeholder={this.props.text.password} onChange={this.handlePasswordChange} />
 						<input id="buttonConnect" type="submit" value={this.props.text.go} />
 					</form>
 					<div className='selector' onMouseEnter={this.handleDisplayChange} onMouseLeave={this.handleDisplayChange}>

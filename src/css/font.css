@@ -18,6 +18,16 @@
 	src: url('../font/MyriadPro-Semibold.otf');
 }
 
+@font-face {
+	font-family: 'KGNeatlyPrinted';
+	src: url('../font/KGNeatlyPrinted.ttf');
+}
+
+@font-face {
+	font-family: 'KGNeatlyPrintedSpaced';
+	src: url('../font/KGNeatlyPrintedSpaced.ttf');
+}
+
 .Roadway {
 	font-family: 'Roadway';
 }

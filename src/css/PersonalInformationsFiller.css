@@ -1,0 +1,118 @@
+.PersonalInformationsFillerContainer {
+	display: flex;
+	width: 50%;
+	padding-left: 25%;
+	padding-right: 25%;
+	flex-direction: column;
+    justify-content: center;
+	color: #565355;
+	margin: auto;
+}
+
+.firstBlockInfoContainer {
+	display: flex;
+	border: solid black 2px;
+	width: 100%;
+	height: auto;
+	flex-direction: column;
+	margin-bottom: 25px;
+	padding: 5px;
+}
+
+.blockInfoContainer {
+	display: flex;
+	border: solid black 1px;
+	border-radius: 2px;
+	width: 100%;
+	height: auto;
+	border-left: 25%;
+	border-right: 25%;
+	flex-direction: column;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+.bigTitlePersonalInformationsFiller {
+	font-family: 'MyriadProSemiB';
+	color: #4d555a;
+	padding-bottom: 7px;
+	font-size: 19px;
+}
+
+.titlePersonalInformationsFiller {
+	font-family: 'MyriadProSemiB';
+	color: #111111;
+	padding: 5px 0px 10px 5px;
+}
+
+.bigTextPersonalInformationsFiller {
+	font-family: 'MyriadProReg';
+	color: #686666;
+}
+
+.subTitlePersonalInformationsFiller {
+	font-family: 'MyriadProReg';
+	color: black;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+.textPersonalInformationsFiller {
+	font-family: 'MyriadProReg';
+	color: #686666;
+	padding-left: 5px;
+	max-width: 40%;
+}
+
+.PersonalInformationsStandartLine {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 10px;
+}
+
+.PersonalInformationsMpLine {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 10px;
+}
+
+.multipleChoiceQuestion {
+    width: 51.5%;
+    padding: 10px 15px 10px 15px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #F2F5F7;
+	padding-bottom: 10px;
+	border: solid grey 1px
+}
+
+.greenText {
+	color: #6cc6c0
+}
+
+.CreateProfilBtn {
+    font-family: 'MyriadProSemiB';
+    font-size: 20px;
+    background: #4095d5;
+	width: 200px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 3px 10px 3px 10px;
+    border: 1px solid #4095d5;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+.CreateProfilBtn:hover {
+	background: #fff;
+	color: #4095d5;
+	border: 1px solid #4095d5;
+}
+
+.creationBtnContainer {
+	display: inline-flex;
+	width: 100%;
+	justify-content: flex-end;
+}

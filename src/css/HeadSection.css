@@ -60,7 +60,9 @@ nav {
 	margin-right: 12px;
 	width: 120px;
 	font-family: 'MyriadProReg';
-	padding: 2px 2px 2px 2px;
+	padding: 3px;
+	border: solid rgb(189, 189, 189) 1px;
+	border-radius: 2px;
 }
 
 #buttonConnect {
@@ -71,11 +73,13 @@ nav {
 	border-radius: 3px;
 	border: none;
 	cursor: pointer;
-	margin-right: 35px 
+	margin-right: 35px;
+	padding-top: 6px;
+	padding-bottom: 3px;
 }
 
 #buttonConnect:hover {
-	background: #5E5F5F;
+	background: rgb(189, 189, 189);
 	color: #F2F5F7;
 }
 
@@ -98,23 +102,23 @@ nav {
 
 .selector {
 	height: 20px;
-	width: 30px;
+	width: 34px;
 	border: solid 1px;
 	border-radius: 4px;
 	position: relative;
 	background: #F2F5F7;
-	color: #5E5F5F;
+	color: rgb(189, 189, 189);
 	display: flex;
 	margin-right: 25px
 }
  
 .selector:hover {
-	background: #5E5F5F;
-	color: #F2F5F7;
+	background: rgb(189, 189, 189);
 }
  
 .flagPart {
-	width: 17px;
+	padding-left: 2px;
+	width: 21px;
 	border-style: solid;
 	height: 100%;
 	border-width: 0px 1px 0px 0px;
@@ -138,7 +142,7 @@ nav {
 }
  
 .aChoice:hover {
-	background: #5E5F5F;
+	background: rgb(189, 189, 189);
 	color: #F2F5F7;
 }
 
@@ -152,7 +156,7 @@ nav {
 	border: solid 1px;
 	border-radius: 3px;
 	background: #F2F5F7;
-	color: #5E5F5F;
+	color: rgb(189, 189, 189);
 	position: absolute;
 	display: block;
 	z-index: 2;
