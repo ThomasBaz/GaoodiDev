@@ -98,6 +98,18 @@ class MatchInfos extends React.Component {
 		
 		return(
 			<div className="MatchInfosContainer">
+				<div className="aMatchInfoLine">
+					<div>{fullText[this.props.locale].ask}</div>
+					<div>{this.props.askValue}</div>
+				</div>
+				<div className="aMatchInfoLine">
+					<div>{fullText[this.props.locale].founded}</div>
+					<div>{this.props.foundedValue}</div>
+				</div>
+				<div className="aMatchInfoLine">
+					<div>{fullText[this.props.locale].validated}</div>
+					<div>{this.props.validatedValue}</div>
+				</div>
 			</div>
 		);
 	}
@@ -122,7 +134,7 @@ class CenterRegion extends React.Component {
 				<Presentation locale='fr' />
 				<AskQuestion />
 				<PhotoViewer />
-				<MatchInfos />
+				<MatchInfos locale="fr" askValue="0" foundedValue="0" validatedValue="0"/>
 			</div>
 		);
 	}
