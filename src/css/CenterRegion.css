@@ -35,7 +35,13 @@
     width: calc(100% + 14px);
     height: 600px;
     margin-top: 15px;
-    background-color: red;
+    background-color: rgb(233, 233, 233);
+}
+
+.PhotoViewerImg {
+    display: block;
+    height: 600px;
+    width: auto;
 }
 
 .MatchInfosContainer {
@@ -59,4 +65,40 @@
 	font-family: 'MyriadProReg';
 	font-size: 20px;
 	color: #4095d5;
+}
+
+.prevBtn {
+    background-image: url("../img/150/fleche_gauche.png");
+    height: 80px;
+    width: 40px;
+    background-color: Transparent;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border: none;
+}
+
+.prevBtn:hover {
+    background-image: url("../img/150/fleche_gauche_02.png");
+}
+
+.prevBtn:focus {
+    outline: none;  
+}
+
+.nextBtn {
+    background-image: url("../img/150/fleche_droite.png");
+    height: 80px;
+    width: 40px;
+    background-color: Transparent;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border: none;
+}
+
+.nextBtn:hover {
+    background-image: url("../img/150/fleche_droite_02.png");
+}
+
+.nextBtn:focus {
+    outline: none;  
 }
