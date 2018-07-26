@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/VerticalRegion.css';
 
-class VerticalRegion extends React.Component {
+class CountChip extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -17,8 +17,46 @@ class VerticalRegion extends React.Component {
 		}
 		
 		return(
+			<div className="countChipContainer">
+				{this.props.count}
+			</div>
+		);
+	}
+}
+
+class VerticalRegion extends React.Component {
+
+	constructor(props) {
+		super(props);
+
+		this.handleClickMsg = this.handleClickMsg.bind(this);
+		this.handleClickFriends = this.handleClickFriends.bind(this);
+		this.handleClickLeisures = this.handleClickLeisures.bind(this);
+	}
+
+	handleClickMsg() {
+		// On redirige vers la messagerie
+	}
+	
+	handleClickFriends() {
+		// ??
+	}
+	
+	handleClickLeisures() {
+		// Affiche une dialog qui permet d'ajouter des passions
+    }
+
+	render() {
+		const fullText = {
+			'fr': {
+			},
+			'en':  {
+			}
+		}
+		
+		return(
 			<div className="VerticalRegionContainer">
-				<ImgProfile profileImg={null}/>
+				<ImgProfile profileImg={null} verified={false}/>
 				<div className="vertTitle">Prenom. N</div>
 				<div className="vertSubTitle">Pays - Ville</div>
 				<div className="vertInfo">info</div>
@@ -26,8 +64,14 @@ class VerticalRegion extends React.Component {
 				<div className="vertInfo">info</div>
 				<div className="vertInfo">info</div>
 				<div className="vertInfo">info</div>
-				<div className="vertMessages">Mes messages...</div>
-				<div className="vertFriends">Mes amis du monde...</div>
+				<div className="vertMessages">
+					Mes messages...
+					<CountChip count={0}/>
+				</div>
+				<div className="vertFriends">
+					Mes amis du monde...
+					<CountChip count={0}/>
+				</div>
 				<div className="vertLeisures">Mes passions...</div>
 			</div>
 		);
@@ -40,7 +84,7 @@ class ImgProfile extends React.Component {
 		super(props);
 		
 		this.state = {
-            "hover": false
+			"hover": false
 		}
 		
 		this.handleEnter = this.handleEnter.bind(this);
@@ -79,6 +123,7 @@ class ImgProfile extends React.Component {
 		return(
 			<div className="ImgProfileContainer">
 				{img}
+				<img className="IsVerified" src="img/240/verifié_240.png" style={{display: this.props.verified ? 'block' : 'none' }}/>
 			</div>
 		);
 	}

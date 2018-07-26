@@ -89,6 +89,18 @@
     border: solid #d9d9d9 1px;
     color: #d9d9d9;
     border-radius: 7px;
+	cursor: pointer;
+    background-image: url("../img/120/icone_messanger_grey.png");
+    background-size: 80% 60%;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+}
+
+.IsVerified {
+    position: relative;
+    height: 18%;
+    top: -25px;
+    left: 74%;
 }
 
 .vertFriends {
@@ -101,6 +113,11 @@
     border: solid #d9d9d9 1px;
     color: #d9d9d9;
     border-radius: 7px;
+    background-image: url("../img/120/icone_user_gris.png");
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-size: 50% 70%;
+	cursor: pointer;
 }
 
 .vertLeisures {
@@ -108,9 +125,26 @@
     font-size: 18px;
     padding: 3px;
     margin: 7px;
-    height: 700px;
+    height: 800px;
     width: 180px;
     border: solid #d9d9d9 1px;
     color: #d9d9d9;
     border-radius: 7px;
+	cursor: pointer;
+}
+
+.countChipContainer {
+    position: relative;
+    left: 70%;
+    top: 50%; 
+    height: 22%;
+    width: 16%;
+    z-index: 12;
+    background-color: rgba(243, 55, 55, 0.767);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+	font-family: 'MyriadProReg';
 }

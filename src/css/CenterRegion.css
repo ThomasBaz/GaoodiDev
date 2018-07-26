@@ -21,14 +21,54 @@
 }
 
 .AskQuestionContainer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 150px;
+    /*height: 80px;*/
+    height: auto;
     border: solid #d9d9d9 1px;
-    color: #8d969d;
+    color: #7e7e7e;
     background-color: white;
+    font-size: 15px;
     border-radius: 7px;
-    padding: 3px 7px 3px 7px;
+    padding: 15px 7px 15px 7px;
     margin-top: 15px;
+}
+
+.AskQuestionText {
+    margin: 0px 20px 0px 20px;
+    padding: 0px;
+}
+
+.AskQuestionFirstLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+	font-family: 'MyriadProSemiB';
+	font-size: 25px;
+    color: #4095d5;
+    margin-bottom: 0px;
+    padding: 0px 20px 10px 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.AskQuestionFirstLine p {
+    margin: 0px 0px 7px 0px;
+}
+
+.AskQuestionContainer img {
+    height: 30px;
+}
+
+.pbContainer {
+    height: 30px;
+    width: 50%;
+    background-image: url("../img/240/barre_prog_quest.png");
+    background-repeat: no-repeat;
+    padding: 0px;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .PhotoViewerContainer {
@@ -101,4 +141,36 @@
 
 .nextBtn:focus {
     outline: none;  
+}
+
+.bigButton {
+	font-family: 'MyriadProReg';
+	font-size: 25px;
+	background: #4095d5;
+	color: #fff;
+	border-radius: 3px;
+	border: 1px solid #4095d5;
+	cursor: pointer;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+bigButton:disabled,
+button[disabled]{
+	border-color: #b4b4b4;
+	background: #b4b4b4;
+    color: #e2e0e0;
+    cursor: not-allowed;
+}
+
+.findCorres {
+    width: 370px;
+    padding: 10px;
+}
+
+.finishProfile {
+    width: 200px;
+	font-size: 18px;
+	padding: 5px 10px 5px 10px;
 }
