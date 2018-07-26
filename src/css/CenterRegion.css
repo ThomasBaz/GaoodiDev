@@ -61,14 +61,30 @@
     height: 30px;
 }
 
+.progressbar-progress {
+    background-color: #4095d5 !important;
+    /*height: 26px !important;
+    margin: 3px;*/
+    height: 30px !important;
+}
+
 .pbContainer {
     height: 30px;
     width: 50%;
-    background-image: url("../img/240/barre_prog_quest.png");
-    background-repeat: no-repeat;
+    /*background-image: url("../img/240/barre_prog_quest.png");
     padding: 0px;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-repeat: no-repeat;*/
+    border: solid #d9d9d9 1px;
+    color: #6d6d6d;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.pbValue {
+    position: absolute;
+    padding-top: 2px;
+    padding-left: 20%;
+    color: white;
 }
 
 .PhotoViewerContainer {

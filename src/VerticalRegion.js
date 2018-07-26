@@ -56,7 +56,7 @@ class VerticalRegion extends React.Component {
 		
 		return(
 			<div className="VerticalRegionContainer">
-				<ImgProfile profileImg={null} verified={false}/>
+				<ImgProfile profileImg={null} verified={true}/>
 				<div className="vertTitle">Prenom. N</div>
 				<div className="vertSubTitle">Pays - Ville</div>
 				<div className="vertInfo">info</div>

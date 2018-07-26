@@ -60,7 +60,8 @@ class AskQuestion extends React.Component {
 					<p>{fullText[this.props.locale]["title"]}</p>
 					<img src="../img/120/question.png"/>
 					<div className="pbContainer">
-						<Progress completed={40} />
+						<div className="pbValue">40%</div>
+						<Progress className="customPgBar" completed={80} />
 					</div>
 				</div>
 				<p className="AskQuestionText">{fullText[this.props.locale]["text"]}</p>
