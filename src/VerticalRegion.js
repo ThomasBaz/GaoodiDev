@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/VerticalRegion.css';
+import LeasureBox from './LeasureBox.js';
 
 class CountChip extends React.Component {
 
@@ -29,6 +30,10 @@ class VerticalRegion extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.state = {
+			"leasureClicked": false
+		}
+
 		this.handleClickMsg = this.handleClickMsg.bind(this);
 		this.handleClickFriends = this.handleClickFriends.bind(this);
 		this.handleClickLeisures = this.handleClickLeisures.bind(this);
@@ -44,7 +49,12 @@ class VerticalRegion extends React.Component {
 	
 	handleClickLeisures() {
 		// Affiche une dialog qui permet d'ajouter des passions
-    }
+		if(this.state.leasureClicked) {
+			this.setState({leasureClicked : false});
+		} else {
+			this.setState({leasureClicked : true});
+		}
+	}
 
 	render() {
 		const fullText = {
@@ -72,7 +82,8 @@ class VerticalRegion extends React.Component {
 					Mes amis du monde...
 					<CountChip count={0}/>
 				</div>
-				<div className="vertLeisures">Mes passions...</div>
+				<div className="vertLeisures" onClick={this.handleClickLeisures}>Mes passions...</div>
+				<LeasureBox display={this.state.leasureClicked}/>
 			</div>
 		);
 	}
