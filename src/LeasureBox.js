@@ -2,38 +2,49 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/LeasureBox.css';
 
-class LeasureBox extends React.Component {
+class CustomImage extends React.Component {
 
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			contentText: ''
-		};
+			selected: false
+		}
 
-		this.submitChanges = this.submitChanges.bind(this);
 		this.clickIcon = this.clickIcon.bind(this);
 	}
-
-	submitChanges(event) {
-		console.log("submit button clicked");
-		//this.setState({contentText: event.target.value});
+	
+	componentDidMount() {
+		if(this.props.selected) {
+			this.setState({selected: true});
+		}
 	}
 
 	clickIcon(event) {
-		debugger
-		console.log("Icon clicked");
-		//this.setState({contentText: event.target.value});
+		if(this.state.selected) {
+			this.setState({selected: false});
+		} else {
+			this.setState({selected: true});
+		}
+		console.log("Icon clicked with id : " + this.props.id);
 	}
 
 	render() {
-		const fullText = {
-			'fr': {
-			},
-			'en':  {
-			}
-		}
+		return(
+			<img onClick={this.clickIcon} className={this.state.selected ? 'leasureIconClicked': "leasureIcon"} src={this.props.imgSrc}/>
+		);
 
+	}
+}
+
+class IconContainer extends React.Component {
+
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		
 		const iconLst = ["png_icone/001-chess.png",         "png_icone/002-sausage.png",        "png_icone/004-trekker.png",     "png_icone/008-pan.png",       "png_icone/014-float.png",       "png_icone/024-sack-race.png",   "png_icone/033-bonfire.png",       "png_icone/053-moose.png",     "png_icone/079-crow.png",         "png_icone/cassette-player.png",    "png_icone/seed.png",
 						 "png_icone/001-dance.png",         "png_icone/002-waffle.png",         "png_icone/004-ufo.png",         "png_icone/008-surf.png",      "png_icone/015-golf.png",        "png_icone/024-tiger.png",       "png_icone/033-gorilla.png",       "png_icone/054-snail.png",     "png_icone/080-dolphin.png",      "png_icone/chef-hat.png",           "png_icone/smiley.png",
 						 "png_icone/001-drizzle.png",       "png_icone/003-rainy-day.png",      "png_icone/005-headphones.png",  "png_icone/008-ticket.png",    "png_icone/016-pirogue.png",     "png_icone/025-ostrich.png",     "png_icone/034-kangaroo.png",      "png_icone/055-cat.png",       "png_icone/085-turtle.png",       "png_icone/coffee-machine.png",     "png_icone/write.png",
@@ -49,13 +60,65 @@ class LeasureBox extends React.Component {
 						 "png_icone/002-rugby.png",         "png_icone/004-sunny-day.png",      "png_icone/007-pacman.png",      "png_icone/013-training.png",  "png_icone/023-fast-food.png",   "png_icone/032-beach.png",       "png_icone/052-lion.png",          "png_icone/077-elephant.png",  "png_icone/camera-video.png",     "png_icone/picture-frame.png"]
 
 		let iconCollection = iconLst.map(
-			(url, index) => <img key={index} onClick={this.clickIcon} className="leasureIcon" src={url}/>
+			(url, index) => {
+				let active;
+				if(this.props.activeIndexes.includes(index)) {
+					active = true;
+				} else {
+					active = false;
+				}
+				return(<CustomImage id={index} imgSrc={url} selected={active}/>);
+			}
 		);
+
+		return(
+			<div id="iconContainerId" className="IconContainer">
+				{iconCollection}
+			</div>
+		);
+
+	}
+}
+
+class LeasureBox extends React.Component {
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			contentText: ''
+		};
+
+		this.submitChanges = this.submitChanges.bind(this);
+	}
+
+	submitChanges(event) {
+		let newIndexArray = [];
+		console.log("submit button clicked");
+		//this.setState({contentText: event.target.value});
+		let listIcon = document.getElementById("iconContainerId").children;
+		for(let index in listIcon) {
+			let anIcon = listIcon[index];
+			if(anIcon.className == "leasureIconClicked") {
+				newIndexArray.push(index);
+			}
+		}
+		console.log(newIndexArray);
+		this.props.closeBox();
+	}
+
+	render() {
+		const fullText = {
+			'fr': {
+			},
+			'en':  {
+			}
+		}
 
 		if(this.props.display) {
 			return(
 				<div className="LeasureBoxContainer">
-					<div className="IconContainer">{iconCollection}</div>
+					<IconContainer activeIndexes={[0,3,5,9]}/>
 					<div className="ExtraContainer"></div>
 					<button id="submitLeasureChangesBtn" onClick={this.submitChanges}>Valider</button>
 				</div>

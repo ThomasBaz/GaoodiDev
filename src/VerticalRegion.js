@@ -83,7 +83,7 @@ class VerticalRegion extends React.Component {
 					<CountChip count={0}/>
 				</div>
 				<div className="vertLeisures" onClick={this.handleClickLeisures}>Mes passions...</div>
-				<LeasureBox display={this.state.leasureClicked}/>
+				<LeasureBox display={this.state.leasureClicked} closeBox={this.handleClickLeisures}/>
 			</div>
 		);
 	}
