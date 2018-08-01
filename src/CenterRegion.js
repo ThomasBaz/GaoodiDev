@@ -153,7 +153,7 @@ class CenterRegion extends React.Component {
 		return(
 			<div className="CenterRegionContainer">
 				<Presentation locale='fr' />
-				<AskQuestion locale='fr' completion={40} />
+				<AskQuestion locale='fr' completion={20} />
 				<PhotoViewer images={["https://uploads.lebonbon.fr/source/2017/paris/octobre/tim-flach-portrait-animaux-disparition-2.png", "https://www.lepal.com/uploads/media/default/0001/01/b2e9889b070dabc0656cbe9f99d3f1747cd9bc4c.jpeg", "https://www.jardiland.com/media/catalog/category/AdobeStock_123791724_1.jpeg", "https://static.mmzstatic.com/wp-content/uploads/2017/04/animaux-intelligents-anecdotes.jpg", "https://cache.marieclaire.fr/data/photo/w1000_ci/4y/tests-animaux-cosmetiques.jpg"]}/>
 				<MatchInfos locale="fr" askValue="0" foundedValue="0" validatedValue="0"/>
 				<button disabled className="bigButton findCorres">Trouver mon correspondant</button>

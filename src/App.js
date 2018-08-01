@@ -86,7 +86,7 @@ class App extends Component {
         <TerminateContract locale={this.state.locale} terminationType={'definitively'}/>
       </div>*/
       <div>
-        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale}/>
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={false}/>
         <Profile locale={this.state.locale}/>
       </div>
     );

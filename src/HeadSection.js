@@ -40,15 +40,27 @@ class HeadSection extends React.Component {
 			'display': this.state.display
 		}
 
+		let notLoggedPart = (
+			<form >
+				<input className="connectionInput" type="text" placeholder={this.props.text.mail} onChange={this.handleEmailChange} />
+				<input className="connectionInput" type="password" placeholder={this.props.text.password} onChange={this.handlePasswordChange} />
+				<input id="buttonConnect" type="submit" value={this.props.text.go} />
+			</form>
+		);
+
+		let loggedPart = (
+			<div >
+				<img src="img/120/icone_user.png" />
+				<img src="img/120/icone_messanger.png" />
+				<img src="https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg" />
+			</div>
+		);
+
 		return (
 			<nav className='HeadSectionContainer'>
 				<p>GAOODI</p>
 				<div className="formContainer">
-					<form >
-						<input className="connectionInput" type="text" placeholder={this.props.text.mail} onChange={this.handleEmailChange} />
-						<input className="connectionInput" type="password" placeholder={this.props.text.password} onChange={this.handlePasswordChange} />
-						<input id="buttonConnect" type="submit" value={this.props.text.go} />
-					</form>
+					{this.props.isLogged ? loggedPart : notLoggedPart}
 					<div className='selector' onMouseEnter={this.handleDisplayChange} onMouseLeave={this.handleDisplayChange}>
 						<div className='flagPart'>
 							<img id='currentLocale' src={this.props.text.urlFlag}/>

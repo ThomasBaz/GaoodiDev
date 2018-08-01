@@ -84,7 +84,7 @@
     padding-left: 20%;
     color: white;
     /* Permet de rajouter un contour noir autour de texte blanc */
-    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    text-shadow: 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d, 0 0 1px #8d969d;
 }
 
 .PhotoViewerContainer {

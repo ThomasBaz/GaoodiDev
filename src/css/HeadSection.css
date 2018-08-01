@@ -146,6 +146,10 @@ nav {
 .dispRel {
 	position: relative;
 }
+
+.imgHeaderLogged {
+	height: 30px;
+}
  
 #choice {
 	height: 40px;
