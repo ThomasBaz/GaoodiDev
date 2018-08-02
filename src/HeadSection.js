@@ -2,6 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/HeadSection.css';
 
+class MessageSmallImg extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+		}
+	}
+
+	render() {
+
+		const count = this.props.messageCount < 10 ? this.props.messageCount : "9+";
+
+		return(
+			<div className="imgMessageHeaderLoggedContainer">
+				<img className="imgHeaderLogged" src="img/120/icone_messanger.png" />
+				<div className="smallMessageCount">{count}</div>
+			</div>
+		);
+	}
+}
+
 class HeadSection extends React.Component {
 
 	constructor(props) {
@@ -49,10 +70,10 @@ class HeadSection extends React.Component {
 		);
 
 		let loggedPart = (
-			<div >
-				<img src="img/120/icone_user.png" />
-				<img src="img/120/icone_messanger.png" />
-				<img src="https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg" />
+			<div className="imgHeaderLoggedContainer">
+				<img className="imgHeaderLogged" src="img/120/icone_user.png" />
+				<MessageSmallImg messageCount={10} />
+				<img className="imgHeaderLogged smallProfileImg" src="https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg" />
 			</div>
 		);
 
