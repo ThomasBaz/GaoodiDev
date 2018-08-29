@@ -31,12 +31,14 @@ class VerticalRegion extends React.Component {
 		super(props);
 
 		this.state = {
-			"leasureClicked": false
+			"leasureClicked": false,
+			"selectedLeisures": []
 		}
 
 		this.handleClickMsg = this.handleClickMsg.bind(this);
 		this.handleClickFriends = this.handleClickFriends.bind(this);
 		this.handleClickLeisures = this.handleClickLeisures.bind(this);
+		this.updateChosenLeisures = this.updateChosenLeisures.bind(this);
 	}
 
 	handleClickMsg() {
@@ -56,6 +58,10 @@ class VerticalRegion extends React.Component {
 		}
 	}
 
+	updateChosenLeisures(leisureUrlArray) {
+		this.setState({selectedLeisures : leisureUrlArray});
+	}
+
 	render() {
 		const fullText = {
 			'fr': {
@@ -63,6 +69,10 @@ class VerticalRegion extends React.Component {
 			'en':  {
 			}
 		}
+
+		let imgLeisures = this.state.selectedLeisures.map(
+			(anUrl, index) => <img key={index} className="selectedLeisure" src={anUrl} />
+		);
 		
 		return(
 			<div className="VerticalRegionContainer">
@@ -82,8 +92,13 @@ class VerticalRegion extends React.Component {
 					Mes amis du monde...
 					<CountChip count={0}/>
 				</div>
-				<div className="vertLeisures" onClick={this.handleClickLeisures}>Mes passions...</div>
-				<LeasureBox display={this.state.leasureClicked} closeBox={this.handleClickLeisures}/>
+				<div className="vertLeisures" onClick={this.handleClickLeisures}>
+					Mes passions...
+					<div className="selectedLeisureContainer">
+						{imgLeisures}
+					</div>
+				</div>
+				<LeasureBox display={this.state.leasureClicked} selectedLeisures={this.state.selectedLeisures} closeBox={this.handleClickLeisures} propagateLeisureChanges={this.updateChosenLeisures}/>
 			</div>
 		);
 	}

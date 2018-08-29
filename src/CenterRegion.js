@@ -78,7 +78,7 @@ class PhotoViewer extends React.Component {
 
 	render() {
 		const images = this.props.images.map(
-			(anUrl) => <img className="PhotoViewerImg" src={anUrl} />
+			(anUrl, index) => <img key={index} className="PhotoViewerImg" src={anUrl} />
 		);
 		
 		return(

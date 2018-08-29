@@ -20,6 +20,10 @@
     border-radius: 7px;
 }
 
+.PresentationContainer:hover {
+    border-color: #4095d5;
+}
+
 .AskQuestionContainer {
     display: flex;
     flex-direction: column;
@@ -33,6 +37,11 @@
     border-radius: 7px;
     padding: 15px 7px 15px 7px;
     margin-top: 15px;
+}
+
+.AskQuestionContainer:hover {
+    border-color: #4095d5;
+    cursor: pointer;
 }
 
 .AskQuestionText {
