@@ -213,7 +213,6 @@ class CenterRegion extends React.Component {
 					defaultPosition={{x: -100, y: 0}}
 					bounds={{top: -250, left: -500, right: 350, bottom: 500}}>
 					<div style={{display: this.state.questionnaryHided ? 'none' : 'block' }} className="DraggableQuestionnary">
-						<div className="handle topBlueBorder"></div>
 						<div className="questionsPart">
 							<QuestionForQuestionnary key={1} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3"]} />
 							<QuestionForQuestionnary key={2} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3"]} />
