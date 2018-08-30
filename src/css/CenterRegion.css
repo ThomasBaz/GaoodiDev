@@ -199,3 +199,80 @@ button[disabled]{
 	font-size: 18px;
 	padding: 5px 10px 5px 10px;
 }
+
+.DraggableQuestionnary {
+    position: absolute;
+    z-index: 20;
+    border: 3px solid #4095d5;
+    background-color: white;
+	border-radius: 5px;
+	font-family: 'MyriadProSemiB';
+	font-size: 20px;
+    color: #4095d5;
+    width: 100%;
+}
+
+.topBlueBorder {
+    height: 25px;
+    background-color:  #4095d5;
+    cursor: grab;
+}
+
+.questionsPart {
+    padding: 10px;
+}
+
+.aQuestionContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.answersContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.blancBtn {
+	font-family: 'MyriadProReg';
+    border: 1px solid #4095d5;
+    background-color: white;
+    color: #4095d5;
+    border-radius: 2px;
+    margin: 10px;
+	font-size: 15px;
+}
+
+.blancBtnClicked, .blancBtn:hover {
+	font-family: 'MyriadProReg';
+    border: 1px solid #4095d5;
+    background-color: #4095d5;
+    color: white;
+	border-radius: 2px;
+}
+
+.QuestionnaryFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.submitQuestionnaryBtn {
+    font-family: 'MyriadProReg';
+    font-size: 15px;
+    background: #4095d5;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #4095d5;
+    cursor: pointer;
+    padding-top: 4px;
+}
+
+.submitQuestionnaryBtn:hover {
+    background: #fff;
+    color: #4095d5;
+}

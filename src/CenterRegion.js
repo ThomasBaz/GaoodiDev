@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/CenterRegion.css';
 import Carousel from 'nuka-carousel';
 import Progress from 'react-progressbar';
+import Draggable from 'react-draggable';
 
 class Presentation extends React.Component {
 
@@ -55,7 +56,7 @@ class AskQuestion extends React.Component {
 		}
 		
 		return(
-			<div className="AskQuestionContainer">
+			<div className="AskQuestionContainer" onClick={this.props.showQuestionnary}>
 				<div className="AskQuestionFirstLine">
 					<p>{fullText[this.props.locale]["title"]}</p>
 					<img src="../img/120/question.png"/>
@@ -136,10 +137,59 @@ class MatchInfos extends React.Component {
 	}
 }
 
+class QuestionForQuestionnary extends React.Component {
+
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+
+		const answersBtn = this.props.answers.map(
+			(anAnswer, index) => <button key={index} className="blancBtn">{anAnswer}</button>
+		);
+
+		return(
+			<div className="aQuestionContainer">
+				{this.props.question}
+				<div className="answersContainer">
+					{answersBtn}
+				</div>
+			</div>
+		);
+	}
+}
+
 class CenterRegion extends React.Component {
 
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			questionnaryHided: true
+		};
+
+		this.hideQuestionnary = this.hideQuestionnary.bind(this);
+		this.showQuestionnary = this.showQuestionnary.bind(this);
+		this.submitAnswers = this.submitAnswers.bind(this);
+	}
+
+	hideQuestionnary() {
+		console.log("hideQuestionnary");
+		if(!this.state.questionnaryHided) {
+			this.setState({questionnaryHided: true});
+		}
+	}
+
+	showQuestionnary() {
+		console.log("showQuestionnary");
+		if(this.state.questionnaryHided) {
+			this.setState({questionnaryHided: false});
+		}
+	}
+
+	submitAnswers() {
+		this.setState({questionnaryHided: true});
 	}
 
 	render() {
@@ -149,11 +199,34 @@ class CenterRegion extends React.Component {
 			'en':  {
 			}
 		}
+
+		/*let allQuestionAndAnswers = this.props.answers.map(
+			(anAnswer, index) => <QuestionForQuestionnary key={index} className="blancBtn" />
+		);*/
 		
 		return(
 			<div className="CenterRegionContainer">
 				<Presentation locale='fr' />
-				<AskQuestion locale='fr' completion={20} />
+				<AskQuestion locale='fr' completion={20} showQuestionnary={this.showQuestionnary}/>
+				<Draggable
+					axis="both"
+					defaultPosition={{x: -100, y: 0}}
+					bounds={{top: -250, left: -500, right: 350, bottom: 500}}>
+					<div style={{display: this.state.questionnaryHided ? 'none' : 'block' }} className="DraggableQuestionnary">
+						<div className="handle topBlueBorder"></div>
+						<div className="questionsPart">
+							<QuestionForQuestionnary key={1} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3"]} />
+							<QuestionForQuestionnary key={2} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3"]} />
+							<QuestionForQuestionnary key={3} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3  to try", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3"]} />
+							<QuestionForQuestionnary key={4} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3"]} />
+							<QuestionForQuestionnary key={5} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3"]} />
+							<QuestionForQuestionnary key={6} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3"]} />
+							<div className="QuestionnaryFooter">
+								<button onClick={this.hideQuestionnary} className="submitQuestionnaryBtn">Valider</button>
+							</div>
+						</div>
+					</div>
+				</Draggable>
 				<PhotoViewer images={["https://uploads.lebonbon.fr/source/2017/paris/octobre/tim-flach-portrait-animaux-disparition-2.png", "https://www.lepal.com/uploads/media/default/0001/01/b2e9889b070dabc0656cbe9f99d3f1747cd9bc4c.jpeg", "https://www.jardiland.com/media/catalog/category/AdobeStock_123791724_1.jpeg", "https://static.mmzstatic.com/wp-content/uploads/2017/04/animaux-intelligents-anecdotes.jpg", "https://cache.marieclaire.fr/data/photo/w1000_ci/4y/tests-animaux-cosmetiques.jpg"]}/>
 				<MatchInfos locale="fr" askValue="0" foundedValue="0" validatedValue="0"/>
 				<button disabled className="bigButton findCorres">Trouver mon correspondant</button>
