@@ -31,12 +31,14 @@ class HeadSection extends React.Component {
 		this.state = {
 			"emailValue": "",
 			"passwordValue": "",
-			"display": "none"
+			"display": "none",
+			"dropdown": "none"
 		}
 
 		this.handleEmailChange = this.handleEmailChange.bind(this);
 		this.handlePasswordChange = this.handlePasswordChange.bind(this);
 		this.handleDisplayChange = this.handleDisplayChange.bind(this);
+		this.handleDropdownChange = this.handleDropdownChange.bind(this);
 	}
 
     handleEmailChange(e) {
@@ -53,12 +55,24 @@ class HeadSection extends React.Component {
 	    } else {
         	this.setState({display: 'none'});
 	    }
+	}
+	
+	handleDropdownChange() {
+    	if(this.state.dropdown === 'none') {
+        	this.setState({dropdown: 'block'});
+	    } else {
+        	this.setState({dropdown: 'none'});
+	    }
     }
 
 	render() {
 		
 		let style = {
 			'display': this.state.display
+		}
+
+		let styleDropdown = {
+			'display': this.state.dropdown
 		}
 
 		let notLoggedPart = (
@@ -73,7 +87,17 @@ class HeadSection extends React.Component {
 			<div className="imgHeaderLoggedContainer">
 				<img className="imgHeaderLogged" src="img/120/icone_user.png" />
 				<MessageSmallImg messageCount={10} />
-				<img className="imgHeaderLogged smallProfileImg" src="https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg" />
+				<div className="dropdown" onMouseEnter={this.handleDropdownChange} onMouseLeave={this.handleDropdownChange}>
+					<img className="imgHeaderLogged smallProfileImg" src="https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg" />
+					<div id="myDropdown" class="dropdown-content" style={styleDropdown}>
+						<a href="#">Mes infos</a>
+						<a href="#">Mon profil</a>
+						<a href="#">Mon messages</a>
+						<a href="#">Mes amis</a>
+						<a href="#">Se déconnecter</a>
+						<a className="paddTop5" href="#">Nous contacter</a>
+					</div>
+				</div>
 			</div>
 		);
 
