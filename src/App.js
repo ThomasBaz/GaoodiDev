@@ -13,6 +13,7 @@ import PersonalInformations from './PersonalInformations.js';
 import PersonalInformationsFiller from './PersonalInformationsFiller.js';
 import TerminateContract from './TerminateContract.js';
 import Profile from './Profile.js';
+import MailBox from './MailBox.js';
 
 
 class App extends Component {
@@ -69,7 +70,7 @@ class App extends Component {
 
     return (/*
       <div>
-        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale}/>
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
         <div id="imgContainer">
             <img src={url[this.state.locale]} width="100%" height="auto" z-index="1"/>
             <div id="imgLabel">{fullText[this.state.locale]}</div>
@@ -85,9 +86,9 @@ class App extends Component {
         <PersonalInformationsFiller locale={this.state.locale}/>
         <TerminateContract locale={this.state.locale} terminationType={'definitively'}/>
       </div>*/
-      <div>
+      <div className="AppContainer">
         <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
-        <Profile locale={this.state.locale}/>
+        <MailBox />
       </div>
     );
   }
