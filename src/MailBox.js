@@ -50,15 +50,23 @@ class MailBox extends React.Component {
 					<div className="MailBoxTitle">
 						A ...
 					</div>
-					<div className="MailBoxMessagesContent scrollableDiv">
+					<div className="MailBoxMessagesContent">
+						<div className="messagesContainer ">
 						
+						</div>
+						<div className="sendMessageContainer ">
+							<textarea placeholder={"Ecrivez un message ..."}  className="mailBoxMessageInput"></textarea>
+							<button className="mailBoxSendMessageBtn">
+								{"Envoyer"}
+							</button>
+						</div>
 					</div>
 				</div>
 				<div className="MailBoxTrad">
 					<div className="MailBoxTitle">
 						Dictoinnaire
 					</div>
-					<div className="MailBoxTradContent scrollableDiv">
+					<div className="MailBoxTradContent">
 						
 					</div>
 				</div>
