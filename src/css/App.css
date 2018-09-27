@@ -4,6 +4,12 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+	transition: 0.5s;
+}
+
+/* On ajoute des transitions */
+.AppContainer * {
+  transition: 0.5s;
 }
 
 .App-logo {
