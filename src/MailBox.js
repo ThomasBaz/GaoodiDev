@@ -66,9 +66,9 @@ class MailBox extends React.Component {
 					</div>
 					<div className="MailBoxContactsContent scrollableDiv">
 						<ContactLine name={"Max la menace"} imgUrl={"https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg"} />
-						<ContactLine name={"Juju l'embrouille"} imgUrl={"https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg"} />
-						<ContactLine name={"Nodin le coquin"} imgUrl={"https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg"} />
-						<ContactLine name={"Tomitom moi"} imgUrl={"https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg"} />
+						<ContactLine name={"Juju l'embrouille"} imgUrl={"http://www.nintendo-master.com/galerie/upload/data/2d341f9be827014d4af2d8a37e6cb39e.jpg"} />
+						<ContactLine name={"Nodin le coquin"} imgUrl={"https://www.pokepedia.fr/images/8/89/Salam%C3%A8che-RFVF.png"} />
+						<ContactLine name={"Tomitom moi"} imgUrl={"https://www.pokepedia.fr/images/e/ef/Bulbizarre-RFVF.png"} />
 					</div>
 				</div>
 				<div className="MailBoxMessages">
