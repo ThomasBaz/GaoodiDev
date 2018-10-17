@@ -2,6 +2,54 @@ import React from 'react';
 //import ReactDOM from 'react-dom';
 import './css/DestChoice.css';
 
+
+class SelectAge extends React.Component {
+	constructor(props) {
+        super(props);
+    }
+
+    handleMouseEnter(event) {
+        if(event.target.className == 'DestImgContainer') {
+            event.target.children[1].className = 'centeredTextSelected';
+        } else {
+            event.target.parentElement.children[1].className = 'centeredTextSelected';
+        }
+    }
+    
+    handleMouseLeave(event) {
+        let currentNode;
+        if(event.target.className == 'DestImgContainer') {
+            currentNode = event.target.children[1];
+        } else {
+            currentNode = event.target.parentElement.children[1];
+        }
+        if(this.props.active) {
+            currentNode.className = 'centeredTextSelected';
+        } else {
+            currentNode.className = 'centeredText';
+        }
+    }
+
+	render() {
+        const ages = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+        let min = this.props.min;
+        let max = this.props.max;
+        let selectedValue = this.props.selectedValue;
+
+        let options = ages.map(function(num) {
+            if((num>=min)&&(num<=max)) {
+                return (selectedValue==num?<option value={num} selected>{num}</option>:<option value={num}>{num}</option>);
+            }
+        });
+
+        return (
+            <select onChange={this.props.handleSelectChange} className="selectAge">
+                {options}
+            </select>
+		);
+	}
+}
+
 class DestImg extends React.Component {
 	constructor(props) {
         super(props);
@@ -47,21 +95,32 @@ class DestChoice extends React.Component {
 		super(props);
 
 		this.state = {
-            dest: null,
-            activeCountry: null
+            activeCountry: null,
+            from: 13,
+            to: 25
 		};
 
-		this.chooseDest = this.chooseDest.bind(this);
 		this.setActive = this.setActive.bind(this);
+		this.handleMinSelectChange = this.handleMinSelectChange.bind(this);
+        this.handleMaxSelectChange = this.handleMaxSelectChange.bind(this);
+        this.submitDestAndAge = this.submitDestAndAge.bind(this);
 	}
 
-	chooseDest(event) {
-		this.setState({dest: event.target.value});
-    }
-    
     setActive(event) {
         this.setState({activeCountry: event.target.parentElement.children[1].innerText});
-	}
+    }
+    
+    handleMinSelectChange(event) {
+        this.setState({from: event.target.value});
+    }
+    
+    handleMaxSelectChange(event) {
+        this.setState({to: event.target.value});
+    }
+    
+    submitDestAndAge() {
+        console.log('Selected country :' + this.state.activeCountry + ', from ' + this.state.from + ' to ' + this.state.to + ' yo');
+    }
 
 	render() {
 		const fullText = {
@@ -100,10 +159,12 @@ class DestChoice extends React.Component {
                     {fullText[this.props.locale].text1}
                     <div className='ageChoiceLine'>
                         {fullText[this.props.locale].text2}
+                        <SelectAge name='fromAge' min={13} max={this.state.to} selectedValue={this.state.from} handleSelectChange={this.handleMinSelectChange} />
                         {fullText[this.props.locale].text3}
+                        <SelectAge name='toAge' min={this.state.from} max={25} selectedValue={this.state.to} handleSelectChange={this.handleMaxSelectChange} />
                     </div>
                 </div>
-                <button className='hereWeGoBtn'>{fullText[this.props.locale].btnText}</button>
+                <button onClick={this.submitDestAndAge} className='hereWeGoBtn'>{fullText[this.props.locale].btnText}</button>
 			</div>
 		);
 	}
