@@ -89,7 +89,7 @@ class HeadSection extends React.Component {
 				<MessageSmallImg messageCount={10} />
 				<div className="dropdown" onMouseEnter={this.handleDropdownChange} onMouseLeave={this.handleDropdownChange}>
 					<img className="imgHeaderLogged smallProfileImg" src="https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg" />
-					<div id="myDropdown" class="dropdown-content" style={styleDropdown}>
+					<div id="myDropdown" className="dropdown-content" style={styleDropdown}>
 						<a href="#">Mes infos</a>
 						<a href="#">Mon profil</a>
 						<a href="#">Mon messages</a>

@@ -1,0 +1,97 @@
+.DestChoiceContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    font-family: "KGNeatlyPrinted";
+    font-size: 25px;
+    color: #949494;
+    text-align: left;
+    padding-top: 5%;
+}
+.ageChoiceContainer {
+    width: calc(100%-10px);
+    border: solid #b3b3b3 1px;
+    border-radius: 5px;
+    margin-top: 15px;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+.ageChoiceLine {
+    flex-direction: line;
+    color: #444444;
+}
+
+.DestImgContainerImg {
+    width: 100%;
+    z-index: 1;
+    -webkit-filter: brightness(100%);
+	filter: brightness(100%);
+}
+
+.DestImgContainer {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.centeredText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+}
+
+.centeredTextSelected {
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-weight: bold;
+    color: white;
+}
+
+.DestImgContainerImg:hover {
+    -webkit-filter: brightness(30%);
+	filter: brightness(30%);
+}
+
+.DestImgSelected {
+    width: 100%;
+    z-index: 1;
+    -webkit-filter: brightness(30%);
+	filter: brightness(30%);
+}
+
+.DestImgUnselected {
+    -webkit-filter: brightness(100%);
+	filter: brightness(100%);
+}
+
+.hereWeGoBtn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'MyriadProReg';
+    font-size: 15px;
+    background: #4095d5;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #4095d5;
+    cursor: pointer;
+    padding-top: 4px;
+    width: 150px;
+    align-self: center;
+}
+
+.hereWeGoBtn:hover {
+    background: #fff;
+    color: #4095d5;
+}

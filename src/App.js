@@ -14,6 +14,7 @@ import PersonalInformationsFiller from './PersonalInformationsFiller.js';
 import TerminateContract from './TerminateContract.js';
 import Profile from './Profile.js';
 import MailBox from './MailBox.js';
+import DestChoice from './DestChoice';
 
 
 class App extends Component {
@@ -85,10 +86,11 @@ class App extends Component {
         <PersonalInformations/>
         <PersonalInformationsFiller locale={this.state.locale}/>
         <TerminateContract locale={this.state.locale} terminationType={'definitively'}/>
+        <MailBox />
       </div>*/
       <div className="AppContainer">
         <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
-        <MailBox />
+        <DestChoice countryInfos={[{url: 'img/1080/CANADA_1080.png', name: 'CANADA'}, {url: 'img/1080/FRANCE_1080.png', name: 'FRANCE'}, {url: 'img/1080/USA_1080.png', name: 'USA'}, {url: 'img/1080/Belgique_1080.png', name: 'BELGIQUE'}]} locale={this.state.locale}/>
       </div>
     );
   }
