@@ -106,3 +106,55 @@
     margin-right: 3px;
     margin-bottom: 3px;
 }
+
+.customRadioBtn {
+    display: flex;
+    flex-direction: column;
+}
+
+.inLineFlex {
+    flex-direction: line;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 23px;
+    padding-top: 4px;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+   
+    width: 16px;
+    height: 16px;
+   
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    background-color: rgb(240, 240, 240);
+    border: solid rgb(185, 185, 185) 1px;
+}
+
+.customRadioBtn label:before {
+    border-radius: 8px;
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    background-color: #4095d5;
+    transition: background-color 500ms linear;
+}
+
+input[type=radio]:hover + label:before {
+    content: "\2022";
+    background-color: #4095d5;
+    transition: background-color 500ms linear;
+}
