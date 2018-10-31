@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/HeadSection.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class MessageSmallImg extends React.Component {
 	constructor(props) {
@@ -103,7 +104,9 @@ class HeadSection extends React.Component {
 
 		return (
 			<nav className='HeadSectionContainer'>
-				<p>GAOODI</p>
+				<Link className="linkNoUnderline" to="/">
+					<p>GAOODI</p>
+				</Link>
 				<div className="formContainer">
 					{this.props.isLogged ? loggedPart : notLoggedPart}
 					<div className='selector' onMouseEnter={this.handleDisplayChange} onMouseLeave={this.handleDisplayChange}>
@@ -122,7 +125,9 @@ class HeadSection extends React.Component {
 							</div>
 						</div>
 					</div>
-					<button id="FAQ">{this.props.text.faq}</button>
+					<Link to="/FAQ">
+						<button id="FAQ">{this.props.text.faq}</button>
+					</Link>
 				</div>
 			</nav>
 		)

@@ -33,7 +33,7 @@
 .Subscribe img {
 	position: relative;
 	top: 50px;
-	left: 275px;
+	/*left: 275px;*/
 	width: 450px;
 	height: auto;
 	z-index: 3;

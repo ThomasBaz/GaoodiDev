@@ -15,14 +15,14 @@
 
 #greyPart .title {
 	padding-top: 30px;
-	padding-left: 15%;
+	margin: auto;
 	font-size: 30px;
 	font-family: 'MyriadPro';
 	padding-bottom: 10px;
 }
 
 #greyPart .subTitle {
-	padding-left: 18%;
+	margin: auto;
 	font-size: 25px;
 	font-family: 'MyriadProSemiB';
 	padding-bottom: 10px;
