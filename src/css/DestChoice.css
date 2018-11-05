@@ -116,11 +116,11 @@
     flex-direction: line;
 }
 
-input[type=radio] {
+.DestChoiceContainer input[type=radio] {
     display: none;
 }
 
-label {
+.DestChoiceContainer label {
     display: inline-block;
     cursor: pointer;
     position: relative;
@@ -128,7 +128,7 @@ label {
     padding-top: 4px;
 }
 
-label:before {
+.DestChoiceContainer label:before {
     content: "";
     display: inline-block;
    
@@ -143,17 +143,17 @@ label:before {
     border: solid rgb(185, 185, 185) 1px;
 }
 
-.customRadioBtn label:before {
+.DestChoiceContainer .customRadioBtn label:before {
     border-radius: 8px;
 }
 
-input[type=radio]:checked + label:before {
+.DestChoiceContainer input[type=radio]:checked + label:before {
     content: "\2022";
     background-color: #4095d5;
     transition: background-color 500ms linear;
 }
 
-input[type=radio]:hover + label:before {
+.DestChoiceContainer input[type=radio]:hover + label:before {
     content: "\2022";
     background-color: #4095d5;
     transition: background-color 500ms linear;

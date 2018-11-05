@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Subscribe from './Subscribe.js';
 import './css/BigFooter.css';
 import './css/font.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class BigFooter extends React.Component {
 
@@ -54,7 +55,9 @@ class BigFooter extends React.Component {
 					<div className="subTitle">{fullText[this.props.locale].text6}</div>
 					<div className="subTitle">{fullText[this.props.locale].text7}</div>
 				</div>
-				<Subscribe locale={this.props.locale}/>
+				<Link className="linkNoUnderline" to="/newProfile">
+					<Subscribe locale={this.props.locale}/>
+				</Link>
 			</div>
 		);
 	}

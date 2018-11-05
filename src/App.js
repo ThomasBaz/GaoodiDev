@@ -25,21 +25,29 @@ class App extends Component {
 
     this.state = {
       "locale": "fr",
-      "logged": false
+      "logged": true
     }
 
     this.handleLocaleChangeToFr = this.handleLocaleChangeToFr.bind(this);
     this.handleLocaleChangeToEng = this.handleLocaleChangeToEng.bind(this);
+    this.handleLoggout = this.handleLoggout.bind(this);
+    this.handleLoggin = this.handleLoggin.bind(this);
   }
 
-  handleLocaleChangeToFr(e) {
-    debugger
+  handleLocaleChangeToFr() {
     this.setState({locale: 'fr'});
   }
 
-  handleLocaleChangeToEng(e) {
-    debugger
+  handleLocaleChangeToEng() {
     this.setState({locale: 'en'});
+  }
+
+  handleLoggout() {
+    this.setState({logged: false});
+  }
+
+  handleLoggin() {
+    this.setState({logged: true});
   }
 
   render() {
@@ -73,7 +81,7 @@ class App extends Component {
 
     const Home = () => (
       <div className="AppContainer">
-        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
         <div id="imgContainer">
             <img src={url[this.state.locale]} width="100%" height="auto" z-index="1"/>
             <div id="imgLabel">{fullText[this.state.locale]}</div>
@@ -87,8 +95,43 @@ class App extends Component {
 
     const FAQ = () => (
       <div className="AppContainer">
-        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
-        <Faq />
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <Faq locale={this.state.locale} />
+      </div>
+    );
+
+    const AccountCreation = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <PersonalInformationsFiller locale={this.state.locale}/>
+      </div>
+    );
+
+    const MessageBox = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <MailBox locale={this.state.locale} />
+      </div>
+    );
+
+    const UserInfo = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <PersonalInformations locale={this.state.locale}/>
+      </div>
+    );
+
+    const UserProfile = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <Profile locale={this.state.locale}/>
+      </div>
+    );
+
+    const Destination = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <DestChoice countryInfos={[{url: 'img/1080/CANADA_1080.png', name: 'CANADA'}, {url: 'img/1080/FRANCE_1080.png', name: 'FRANCE'}, {url: 'img/1080/USA_1080.png', name: 'USA'}, {url: 'img/1080/Belgique_1080.png', name: 'BELGIQUE'}]} locale={this.state.locale}/>
       </div>
     );
 
@@ -97,6 +140,11 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/FAQ" component={FAQ} />
+          <Route exact path="/newProfile" component={AccountCreation} />
+          <Route exact path="/messages" component={MessageBox} />
+          <Route exact path="/userInfo" component={UserInfo} />
+          <Route exact path="/profile" component={UserProfile} />
+          <Route exact path="/destination" component={Destination} />
         </div>
       </Router>
     );
@@ -110,7 +158,7 @@ export default App;
         /*
         
         <div className="AppContainer">
-          <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
+          <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
           <DestChoice countryInfos={[{url: 'img/1080/CANADA_1080.png', name: 'CANADA'}, {url: 'img/1080/FRANCE_1080.png', name: 'FRANCE'}, {url: 'img/1080/USA_1080.png', name: 'USA'}, {url: 'img/1080/Belgique_1080.png', name: 'BELGIQUE'}]} locale={this.state.locale}/>
         </div>
 
@@ -119,7 +167,7 @@ export default App;
 
          /*</Router>
       <div>
-        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
         <div id="imgContainer">
             <img src={url[this.state.locale]} width="100%" height="auto" z-index="1"/>
             <div id="imgLabel">{fullText[this.state.locale]}</div>

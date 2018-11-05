@@ -113,9 +113,9 @@ class PersonalInformationsFiller extends React.Component {
 				'text7': 'Pays de résidence',
 				'text8': 'Ville',
 				'text9': 'Code postal',
-				'text10': '',
+				'text10': 'Ta réponse',
 				'text11': '',
-				'text12': 'Mot de passe (doit contenir 8 caractères minimumet au moins une majuscule)',
+				'text12': 'Mot de passe (doit contenir 8 caractères minimum et au moins une majuscule)',
 				'text13': 'Confirmer le mot de passe',
 			},
 			'en':  {
@@ -174,7 +174,7 @@ class PersonalInformationsFiller extends React.Component {
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title6}</div>
 					<PersonalInformationsMultipleChoiceLine multSelect={false} name='Choisir une question de sécurité'/>
-					<PersonalInformationsStandartLine name={text.text9} value={text.text9}/>
+					<PersonalInformationsStandartLine name={text.text10} value={text.text10}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title7}</div>

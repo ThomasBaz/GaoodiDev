@@ -174,7 +174,8 @@ nav {
 }
 
 .imgHeaderLogged {
-	height: inherit;
+	/*height: inherit;*/
+	height: 25px;
 	margin-right: 15px;
 	cursor: pointer;
 }

@@ -271,3 +271,12 @@ button[disabled]{
     background: #fff;
     color: #4095d5;
 }
+
+
+.PhotoViewerContainer * {
+    transition: 0.1s;
+}
+
+.DraggableQuestionnary {
+    transition: 0.1s;
+}

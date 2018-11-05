@@ -9,6 +9,8 @@
     justify-content: center;
 	color: #565355;
 	flex-direction: column;
+	padding-top: 25px;
+	text-align: left;
 }
 
 .PersonalInformationsLine, .informationsLineWithBorder {

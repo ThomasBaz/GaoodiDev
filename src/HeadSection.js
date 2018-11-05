@@ -80,23 +80,41 @@ class HeadSection extends React.Component {
 			<form >
 				<input className="connectionInput" type="text" placeholder={this.props.text.mail} onChange={this.handleEmailChange} />
 				<input className="connectionInput" type="password" placeholder={this.props.text.password} onChange={this.handlePasswordChange} />
-				<input id="buttonConnect" type="submit" value={this.props.text.go} />
+				<Link className="linkNoUnderline" to="/profile">
+					<input id="buttonConnect" type="submit" onClick={this.props.handleLoggin} value={this.props.text.go} />
+				</Link>
 			</form>
 		);
 
 		let loggedPart = (
 			<div className="imgHeaderLoggedContainer">
-				<img className="imgHeaderLogged" src="img/120/icone_user.png" />
-				<MessageSmallImg messageCount={10} />
+				<Link to="/userInfo">
+					<img className="imgHeaderLogged" src="img/120/icone_user.png" />
+				</Link>
+				<Link to="/messages">
+					<MessageSmallImg messageCount={0} />
+				</Link>
 				<div className="dropdown" onMouseEnter={this.handleDropdownChange} onMouseLeave={this.handleDropdownChange}>
-					<img className="imgHeaderLogged smallProfileImg" src="https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg" />
+					<img className="imgHeaderLogged smallProfileImg" src="http://www.nintendo-master.com/galerie/upload/data/2d341f9be827014d4af2d8a37e6cb39e.jpg" />
 					<div id="myDropdown" className="dropdown-content" style={styleDropdown}>
-						<a href="#">Mes infos</a>
-						<a href="#">Mon profil</a>
-						<a href="#">Mon messages</a>
-						<a href="#">Mes amis</a>
-						<a href="#">Se déconnecter</a>
-						<a className="paddTop5" href="#">Nous contacter</a>
+						<Link className="linkNoUnderline" to="/userInfo">
+							<a>Mes infos</a>
+						</Link>
+						<Link className="linkNoUnderline" to="/profile">
+							<a>Mon profil</a>
+						</Link>
+						<Link className="linkNoUnderline" to="/messages">
+							<a>Mon messages</a>
+						</Link>
+						<Link className="linkNoUnderline" to="/">
+							<a>Mes amis</a>
+						</Link>
+						<Link to="/">
+							<a onClick={this.props.handleLoggout}>Se déconnecter</a>
+						</Link>
+						<Link className="linkNoUnderline" to="/">
+							<a className="paddTop5">Nous contacter</a>
+						</Link>
 					</div>
 				</div>
 			</div>

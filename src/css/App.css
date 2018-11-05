@@ -9,7 +9,7 @@
 
 /* On ajoute des transitions */
 .AppContainer * {
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .App-logo {
