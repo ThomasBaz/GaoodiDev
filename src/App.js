@@ -15,8 +15,7 @@ import TerminateContract from './TerminateContract.js';
 import Profile from './Profile.js';
 import MailBox from './MailBox.js';
 import DestChoice from './DestChoice';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
 
@@ -135,52 +134,51 @@ class App extends Component {
       </div>
     );
 
+    const CloseContract = ({ match }) => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <TerminateContract locale={this.state.locale} terminationType={match.params.type}/>
+      </div>
+    );
+
+    const modifyPassword = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <ModifyMP />
+      </div>
+    );
+
+    const Contact = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <ContactForm />
+      </div>
+    );
+
+    const NoMatch = () => (
+      <div className="AppContainer">
+        Error 404 : Page not found !
+      </div>
+    );
+
     return (
       <Router>
-        <div>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/FAQ" component={FAQ} />
-          <Route exact path="/newProfile" component={AccountCreation} />
+          <Route exact path="/newProfile" component={AccountCreation}/>
           <Route exact path="/messages" component={MessageBox} />
           <Route exact path="/userInfo" component={UserInfo} />
           <Route exact path="/profile" component={UserProfile} />
           <Route exact path="/destination" component={Destination} />
-        </div>
+          <Route exact path="/terminateContract/:type" component={CloseContract} />
+          <Route exact path="/modifyPassword" component={modifyPassword} />
+          <Route exact path="/contact" component={Contact} />
+          <Route component={NoMatch} />
+        </Switch>
       </Router>
     );
   }
 }
 
 export default App;
-
-
-
-        /*
-        
-        <div className="AppContainer">
-          <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
-          <DestChoice countryInfos={[{url: 'img/1080/CANADA_1080.png', name: 'CANADA'}, {url: 'img/1080/FRANCE_1080.png', name: 'FRANCE'}, {url: 'img/1080/USA_1080.png', name: 'USA'}, {url: 'img/1080/Belgique_1080.png', name: 'BELGIQUE'}]} locale={this.state.locale}/>
-        </div>
-
-        <Faq />
-        <ContactForm/>
-
-         /*</Router>
-      <div>
-        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={true}/>
-        <div id="imgContainer">
-            <img src={url[this.state.locale]} width="100%" height="auto" z-index="1"/>
-            <div id="imgLabel">{fullText[this.state.locale]}</div>
-        </div>
-        <FormSection locale={this.state.locale}/>
-        <VidPres locale={this.state.locale}/>
-        <SimpleEfficaceSecure locale={this.state.locale}/>
-        <BigFooter locale={this.state.locale}/>
-        <Faq />
-        <ContactForm/>
-        <ModifyMP />
-        <PersonalInformations/>
-        <PersonalInformationsFiller locale={this.state.locale}/>
-        <TerminateContract locale={this.state.locale} terminationType={'definitively'}/>
-        <MailBox />
-      </div>*/

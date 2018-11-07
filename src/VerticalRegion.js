@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/VerticalRegion.css';
 import LeasureBox from './LeasureBox.js';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class CountChip extends React.Component {
 
@@ -84,10 +85,12 @@ class VerticalRegion extends React.Component {
 				<div className="vertInfo">info</div>
 				<div className="vertInfo">info</div>
 				<div className="vertInfo">info</div>
-				<div className="vertMessages">
-					Mes messages...
-					<CountChip count={0}/>
-				</div>
+				<Link className="linkNoUnderline" to="/messages">
+					<div className="vertMessages">
+						Mes messages...
+						<CountChip count={0}/>
+					</div>
+				</Link>
 				<div className="vertFriends">
 					Mes amis du monde...
 					<CountChip count={0}/>

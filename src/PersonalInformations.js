@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/PersonalInformationsFiller.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class PersonalInformationsLine extends React.Component {
 	constructor(props) {
@@ -63,19 +64,25 @@ class PersonalInformations extends React.Component {
 				</div>
 				<div className='PersonalInformationsMP'>
 					<p className='PersonalInformationsName'>*******</p>
-					<button className='PersonalInformationsMPBtn'>Modifier</button>
+					<Link className="linkNoUnderline" to="/modifyPassword" >
+						<button className='PersonalInformationsMPBtn'>Modifier</button>
+					</Link>
 				</div>
 				<div className='TitleAndLine'>
 					<span>Abonnement</span>
 				</div>
 				<PersonalInformationsLine name='1x abonnement annuel' value='150$' />
-				<button className='resBtn'>Résilier -- (profil inactif)</button>
+				<Link className="linkNoUnderline" to="/terminateContract/temporarly" >
+					<button className='resBtn'>Résilier -- (profil inactif)</button>
+				</Link>
 				<p className='smallTxt'>Cette action résillera votre abonnement à partir de xxxxx. Nous garderons dans notre base de données votre profil, vous pourrez réactiver votre abonnement
 à tout moment sans perdre vos informations.</p>
-				<button className='resBtn'>Résilier -- (supprimer profil)</button>
+				<Link className="linkNoUnderline" to="/terminateContract/definitively" >
+					<button className='resBtn'>Résilier -- (supprimer profil)</button>
+				</Link>
 				<p className='smallTxt'>Cette action résillera votre abonnement dès aujourd’hui. Nous supprimerons votre profil et vos informations de notre base de données, de façon définitif.
-Vous pourrez vous réabonner à tout moment mais il faudra vous recréer un pro􀃶l à partir de zéro..<br/>
-ATTENTION - Vous vous êtes engagé à payer pour l’année, vous ne serez pas remboursé pour les mois non utilisé.</p>
+Vous pourrez vous réabonner à tout moment mais il faudra vous recréer un profil à partir de zéro..<br/>
+ATTENTION - Vous vous êtes engagé à payer pour l’année, vous ne serez pas remboursé pour les mois non utilisés.</p>
 			</div>
 		);
 	};

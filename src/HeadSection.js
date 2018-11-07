@@ -91,7 +91,7 @@ class HeadSection extends React.Component {
 				<Link to="/userInfo">
 					<img className="imgHeaderLogged" src="img/120/icone_user.png" />
 				</Link>
-				<Link to="/messages">
+				<Link className="linkNoUnderline" to="/messages">
 					<MessageSmallImg messageCount={0} />
 				</Link>
 				<div className="dropdown" onMouseEnter={this.handleDropdownChange} onMouseLeave={this.handleDropdownChange}>
@@ -112,7 +112,7 @@ class HeadSection extends React.Component {
 						<Link to="/">
 							<a onClick={this.props.handleLoggout}>Se déconnecter</a>
 						</Link>
-						<Link className="linkNoUnderline" to="/">
+						<Link className="linkNoUnderline" to="/contact">
 							<a className="paddTop5">Nous contacter</a>
 						</Link>
 					</div>
@@ -135,10 +135,10 @@ class HeadSection extends React.Component {
 						<div className='dispRel' style={style} >
 							<div id='choice'>
 								<div className='aChoice' onClick={this.props.handleLocaleChangeToFr}>
-									<img src='img/150/langue_fr_150.png'/>
+									<img src='/img/150/langue_fr_150.png'/>
 								</div>
 								<div className='aChoice' onClick={this.props.handleLocaleChangeToEng}>
-									<img src='img/150/langue_eng_150.png'/>
+									<img src='/img/150/langue_eng_150.png'/>
 								</div>
 							</div>
 						</div>

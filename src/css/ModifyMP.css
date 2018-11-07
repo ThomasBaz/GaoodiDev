@@ -1,6 +1,8 @@
 #changeMPContainer {
 	display: flex;
-	justify-content: center;	
+	justify-content: center;
+	text-align: left;
+	padding-top: 5%;	
 }
 
 #changeMPForm {

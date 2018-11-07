@@ -1,6 +1,8 @@
 #formContainer {
 	display: flex;
-	justify-content: center;	
+	justify-content: center;
+	text-align: left;
+	margin-top: 5%;
 }
 
 #contactForm {

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/ContactForm.css';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class ContactForm extends React.Component {
 	constructor(props) {
@@ -41,7 +42,9 @@ class ContactForm extends React.Component {
 					<textarea id='messageInput' type="text" onChange={this.handleMessageChange} />
 			    </label>
 			    <div id='divContactForm'>
-				    <button id='returnFormBtn'>Retour</button> 
+						<Link to="/profile">
+				   		<button id='returnFormBtn'>Retour</button> 
+						</Link>
 				    <input id='inputContactForm' type="submit" value="Envoyer" />
 			    </div>
 			  </form>

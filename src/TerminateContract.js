@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/TerminateContract.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class TerminateContract extends React.Component {
 	constructor(props) {
@@ -80,8 +81,10 @@ class TerminateContract extends React.Component {
 						<div className='TerminateContractSubTitle'>{fullText[this.props.locale][this.props.terminationType].subTitle}</div>
 						<div className='TerminateContractText'>{fullText[this.props.locale][this.props.terminationType].text}</div>
 						<div className='TerminateContractBtnWrapper'>
-							<button className='TerminateContractBtn'>{fullText[this.props.locale][this.props.terminationType].yes}</button> 
-							<button className='TerminateContractBtn'>{fullText[this.props.locale][this.props.terminationType].cancel}</button> 
+							<button className='TerminateContractBtn'>{fullText[this.props.locale][this.props.terminationType].yes}</button>
+							<Link className="linkNoUnderline" to="/userInfo">
+								<button className='TerminateContractBtn'>{fullText[this.props.locale][this.props.terminationType].cancel}</button> 
+							</Link>
 						</div>
 					</div>
 					<div className='TerminateContractSubTitle'>{fullText[this.props.locale][this.props.terminationType].title2}</div>
