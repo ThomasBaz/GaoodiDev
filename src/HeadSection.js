@@ -17,7 +17,7 @@ class MessageSmallImg extends React.Component {
 
 		return(
 			<div className="imgMessageHeaderLoggedContainer">
-				<img className="imgHeaderLogged" src="img/120/icone_messanger.png" />
+				<img className="imgHeaderLogged" src="/img/120/icone_messanger.png" />
 				<div className="smallMessageCount">{count}</div>
 			</div>
 		);
@@ -89,7 +89,7 @@ class HeadSection extends React.Component {
 		let loggedPart = (
 			<div className="imgHeaderLoggedContainer">
 				<Link to="/userInfo">
-					<img className="imgHeaderLogged" src="img/120/icone_user.png" />
+					<img className="imgHeaderLogged" src="/img/120/icone_user.png" />
 				</Link>
 				<Link className="linkNoUnderline" to="/messages">
 					<MessageSmallImg messageCount={0} />

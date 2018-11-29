@@ -157,7 +157,8 @@ class App extends Component {
 
     const NoMatch = () => (
       <div className="AppContainer">
-        Error 404 : Page not found !
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <img className="notFound" src="/img/400/404.png" />
       </div>
     );
 
