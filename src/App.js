@@ -17,6 +17,17 @@ import MailBox from './MailBox.js';
 import DestChoice from './DestChoice';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
+/*const express = require('express');
+const app = express();
+
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});
+*/
 class App extends Component {
 
   constructor(props) {
@@ -52,8 +63,8 @@ class App extends Component {
   render() {
     
     const url = {
-      'fr': "./img/1080/M03_P01_couv_FR.jpg",
-      'en': "./img/1080/M03_P01_couv_ENG.jpg"
+      'fr': "/img/1080/M03_P01_couv_FR.jpg",
+      'en': "/img/1080/M03_P01_couv_ENG.jpg"
     }
 
     const fullText = {
@@ -67,14 +78,14 @@ class App extends Component {
         'go': 'GO !',
         'password': 'Mot de passe',
         'faq': 'FAQ',
-        'urlFlag': 'img/150/langue_fr_150.png'
+        'urlFlag': '/img/150/langue_fr_150.png'
       },
       'en': {
         'mail': 'E-mail',
         'go': 'GO !',
         'password': 'Password',
         'faq': 'FAQ',
-        'urlFlag': 'img/150/langue_eng_150.png'
+        'urlFlag': '/img/150/langue_eng_150.png'
       }
     }
 
@@ -130,7 +141,7 @@ class App extends Component {
     const Destination = () => (
       <div className="AppContainer">
         <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
-        <DestChoice countryInfos={[{url: 'img/1080/CANADA_1080.png', name: 'CANADA'}, {url: 'img/1080/FRANCE_1080.png', name: 'FRANCE'}, {url: 'img/1080/USA_1080.png', name: 'USA'}, {url: 'img/1080/Belgique_1080.png', name: 'BELGIQUE'}]} locale={this.state.locale}/>
+        <DestChoice countryInfos={[{url: '/img/1080/CANADA_1080.png', name: 'CANADA'}, {url: '/img/1080/FRANCE_1080.png', name: 'FRANCE'}, {url: '/img/1080/USA_1080.png', name: 'USA'}, {url: '/img/1080/Belgique_1080.png', name: 'BELGIQUE'}]} locale={this.state.locale}/>
       </div>
     );
 

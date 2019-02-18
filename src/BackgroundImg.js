@@ -37,8 +37,8 @@ class BackgroundImg extends React.Component {
 			<div className="BackgroundImgContainer">
                 <div className='NewBg'>
                     <label onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave} className='NewBg' htmlFor="file-input">
-                        <img src='img/120/icone_photo_click.png' style={{display: this.state.hover ? 'block' : 'none' }}/>
-                        <img src='img/120/icone_photo.png' style={{display: this.state.hover ? 'none' : 'block' }}/>
+                        <img src='/img/120/icone_photo_click.png' style={{display: this.state.hover ? 'block' : 'none' }}/>
+                        <img src='/img/120/icone_photo.png' style={{display: this.state.hover ? 'none' : 'block' }}/>
                         {fullText[this.props.locale].text}
                     </label>
                     <input id="file-input" type="file"/>

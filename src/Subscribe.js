@@ -48,7 +48,7 @@ class Subscribe extends React.Component {
 		return(
 			<div className="Subscribe">
 				<div id="labelSubscribe">{fullText[this.props.locale].label1}</div>
-				<img src="img/720/prix_P01.png" />
+				<img src="/img/720/prix_P01.png" />
 				<p id="months"><b>{fullText[this.props.locale].label2}</b>{fullText[this.props.locale].label3}</p>
 				<p id="price">{fullText[this.props.locale].label4}</p>
 				<button className="button" onClick={this.handleClick}>{fullText[this.props.locale].label5}</button>

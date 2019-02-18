@@ -141,8 +141,8 @@ class ImgProfile extends React.Component {
 			img = (
 				<div className="blueCircle" >
 					<label onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave} className='NewBg' htmlFor="profile_img_input">
-						<img src='img/120/icone_photo.png' style={{display: this.state.hover ? 'none' : 'block' }}/>
-						<img src='img/120/icone_photo_click.png' style={{display: this.state.hover ? 'block' : 'none' }}/>
+						<img src='/img/120/icone_photo.png' style={{display: this.state.hover ? 'none' : 'block' }}/>
+						<img src='/img/120/icone_photo_click.png' style={{display: this.state.hover ? 'block' : 'none' }}/>
 					</label>
 					<input id="profile_img_input" type="file"/>
 				</div>
@@ -152,7 +152,7 @@ class ImgProfile extends React.Component {
 		return(
 			<div className="ImgProfileContainer">
 				{img}
-				<img className="IsVerified" src="img/240/verifié_240.png" style={{display: this.props.verified ? 'block' : 'none' }}/>
+				<img className="IsVerified" src="/img/240/verifié_240.png" style={{display: this.props.verified ? 'block' : 'none' }}/>
 			</div>
 		);
 	}

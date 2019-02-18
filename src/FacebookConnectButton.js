@@ -36,7 +36,7 @@ class FacebookConnectButton extends React.Component {
 	render() {
 		return (
 			<button className="facebookButton">
-				<img src="./img/facebook_blanc.png" height="15px" width="15px"  onClick={this.clickFacebookButton}/>
+				<img src="/img/facebook_blanc.png" height="15px" width="15px"  onClick={this.clickFacebookButton}/>
 				Se connecter avec facebook
 			</button>
 		);

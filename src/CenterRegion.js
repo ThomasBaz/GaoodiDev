@@ -59,7 +59,7 @@ class AskQuestion extends React.Component {
 			<div className="AskQuestionContainer" onClick={this.props.showQuestionnary}>
 				<div className="AskQuestionFirstLine">
 					<p>{fullText[this.props.locale]["title"]}</p>
-					<img src="../img/120/question.png"/>
+					<img src="/img/120/question.png"/>
 					<div className="pbContainer">
 						<div className="pbValue">{this.props.completion}%</div>
 						<Progress className="customPgBar" completed={this.props.completion} />

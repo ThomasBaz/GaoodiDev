@@ -37,7 +37,7 @@ class Faq extends React.Component {
 					<p>Pour donner envie à votre match probable et à sa famille il est fortement conseillé d’insérer de jolie photo de famille.</p>
 					<p>Ex :</p>
 					<div className="divImg">
-					<img src="./img/720/FAQ_Q3.jpg"/>
+					<img src="/img/720/FAQ_Q3.jpg"/>
 					</div>
 					<h2 id='faq_4'>4-  Et si je refuse un match, va-t-on m'en proposer un autre ?</h2>
 					<p>Oui, si vous n'acceptez un match pour quelque raison que ce soit, nous vous en trouverons un autre.</p>
@@ -48,9 +48,9 @@ class Faq extends React.Component {
 					<h2 id='faq_7'>7-  Je n'arrive pas à accéder à la demande de match, que faire ?</h2>
 					<p>SI vous n’arrivez pas à accéder à la recherche de match, il se peut que votre profil n’a pas encore été validé ou que vous n’ayez pas répondu à au moins 70% des questions.</p>
 					<h2 id='faq_8'>8-  Où dois-je aller pour que l'on me pose des questions sur ma personalité, que faire ?</h2>
-					<p>Pas besoin d’aller bien loin, rendez-vous sur votre profil (même si celui-ci n’a pas encore été validé) et cliquez sur cette icone : <img className='smallImg' src='img/120/question.png'/></p>
+					<p>Pas besoin d’aller bien loin, rendez-vous sur votre profil (même si celui-ci n’a pas encore été validé) et cliquez sur cette icone : <img className='smallImg' src='/img/120/question.png'/></p>
 					<h2 id='faq_9'>9-  Je me suis trompé(e) de réponse (ou j'ai changé d'avis), puis-je modifier ma réponse ?</h2>
-					<p>Seules les questions munies de ce symbole <img className='smallImg' src='img/240/modif_quest_240.png'/> sont modifiables à tout moment dans l’espace question, cliquez sur ce même symbole <img className='smallImg' src='img/120/question.png'/> en haut à droite.</p>
+					<p>Seules les questions munies de ce symbole <img className='smallImg' src='/img/240/modif_quest_240.png'/> sont modifiables à tout moment dans l’espace question, cliquez sur ce même symbole <img className='smallImg' src='/img/120/question.png'/> en haut à droite.</p>
 					<p>Les autres questions ne sont pas modifiables.</p>
 					<h2 id='faq_10'>10- Pourquoi je ne vois aucun autre profil sur le site ?</h2>
 					<p>Tout simplement parce qu’avec GAOODI nous fonctionnons par un système de match. Seuls les profils qui vous sont proposés sont visibles à vos yeux.</p>
