@@ -129,8 +129,10 @@ class LeasureBox extends React.Component {
 	render() {
 		const fullText = {
 			'fr': {
+				'text': 'Valider'
 			},
 			'en':  {
+				'text': 'Validate'
 			}
 		}
 
@@ -139,7 +141,7 @@ class LeasureBox extends React.Component {
 				<div className="LeasureBoxContainer">
 					<IconContainer activeUrls={this.props.selectedLeisures}/>
 					<div className="ExtraContainer"></div>
-					<button id="submitLeasureChangesBtn" onClick={this.submitChanges}>Valider</button>
+					<button id="submitLeasureChangesBtn" onClick={this.submitChanges}>{fullText[this.props.locale].text}</button>
 				</div>
 			);
 		} else {

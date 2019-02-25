@@ -63,8 +63,8 @@ class CustomRadioBtn extends React.Component {
                 'choice3': 'Les deux possibilités me conviennent'
             },
             'en':  {
-                'choice1': 'Who doesn\'t speak fluently my mother language',
-                'choice2': 'Who speak fluently my mother language',
+                'choice1': 'Who doesn\'t speak fluently my mother tongue',
+                'choice2': 'Who speak fluently my mother tongue',
                 'choice3': 'Both are okay'
             }
         }

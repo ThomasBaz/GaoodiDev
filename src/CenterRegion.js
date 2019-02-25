@@ -195,8 +195,14 @@ class CenterRegion extends React.Component {
 	render() {
 		const fullText = {
 			'fr': {
+				'text1': 'Valider',
+				'text2': 'Trouver mon correspondant',
+				"text3": 'Finaliser mon profil'
 			},
 			'en':  {
+				'text1': 'Submit',
+				'text2': 'Find my correspondent',
+				"text3": 'Finalize my profile'
 			}
 		}
 
@@ -221,15 +227,15 @@ class CenterRegion extends React.Component {
 							<QuestionForQuestionnary key={5} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3", "answer 1", "answer 2", "answer 3"]} />
 							<QuestionForQuestionnary key={6} question="Intitulé de la question ?" answers={["answer 1", "answer 2", "answer 3"]} />
 							<div className="QuestionnaryFooter">
-								<button onClick={this.hideQuestionnary} className="submitQuestionnaryBtn">Valider</button>
+								<button onClick={this.hideQuestionnary} className="submitQuestionnaryBtn">{fullText[this.props.locale].text1}</button>
 							</div>
 						</div>
 					</div>
 				</Draggable>
 				<PhotoViewer images={["https://uploads.lebonbon.fr/source/2017/paris/octobre/tim-flach-portrait-animaux-disparition-2.png", "https://www.lepal.com/uploads/media/default/0001/01/b2e9889b070dabc0656cbe9f99d3f1747cd9bc4c.jpeg", "https://www.jardiland.com/media/catalog/category/AdobeStock_123791724_1.jpeg", "https://static.mmzstatic.com/wp-content/uploads/2017/04/animaux-intelligents-anecdotes.jpg", "https://cache.marieclaire.fr/data/photo/w1000_ci/4y/tests-animaux-cosmetiques.jpg"]}/>
 				<MatchInfos locale="fr" askValue="0" foundedValue="0" validatedValue="0"/>
-				<button disabled className="bigButton findCorres">Trouver mon correspondant</button>
-				<button className="bigButton finishProfile">Finaliser mon profil</button>
+				<button disabled className="bigButton findCorres">{fullText[this.props.locale].text2}</button>
+				<button className="bigButton finishProfile">{fullText[this.props.locale].text3}</button>
 			</div>
 		);
 	}
