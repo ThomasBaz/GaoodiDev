@@ -66,8 +66,14 @@ class VerticalRegion extends React.Component {
 	render() {
 		const fullText = {
 			'fr': {
+				'text1': 'Mes messages...',
+				'text2': 'Mes amis du monde...',
+				'text3': 'Mes passions...'
 			},
 			'en':  {
+				'text1': 'My messages...',
+				'text2': 'My friends...',
+				'text3': 'My passions...'
 			}
 		}
 
@@ -87,16 +93,16 @@ class VerticalRegion extends React.Component {
 				<div className="vertInfo">info</div>
 				<Link className="linkNoUnderline" to="/messages">
 					<div className="vertMessages">
-						Mes messages...
+						{fullText[this.props.locale].text1}
 						<CountChip count={0}/>
 					</div>
 				</Link>
 				<div className="vertFriends">
-					Mes amis du monde...
+						{fullText[this.props.locale].text2}
 					<CountChip count={0}/>
 				</div>
 				<div className="vertLeisures" onClick={this.handleClickLeisures}>
-					Mes passions...
+					{fullText[this.props.locale].text3}
 					<div className="selectedLeisureContainer">
 						{imgLeisures}
 					</div>

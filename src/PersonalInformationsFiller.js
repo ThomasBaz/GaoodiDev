@@ -118,20 +118,49 @@ class PersonalInformationsFiller extends React.Component {
 				'text8': 'Ville',
 				'text9': 'Code postal',
 				'text10': 'Ta réponse',
-				'text11': '',
+				'text11': 'Création du profil',
 				'text12': 'Mot de passe (doit contenir 8 caractères minimum et au moins une majuscule)',
 				'text13': 'Confirmer le mot de passe',
+				'text14': 'J\'ai lu et j\'accepte les ',
+				'text15': 'conditions générales d\'utilisation ',
+				'text16': 'et les ',
+				'text17': 'conditions générales de vente'
 			},
 			'en':  {
-				'title1': 'Economisez jusqu\'à 75% de votre budjet',
-				'title2': '100% Sécurisé',
-				'bigText1': '',
-				'bigText2': '',
-				'bigText3': '',
-				'bigText4': '',
-				'bigText5': '',
-				'bigText6': '',
-				'text7': '',
+				'title1': 'General Information',
+				'title2': 'General informations',
+				'title3': 'My details',
+				'title4': 'Languages',
+				'title5': 'Password',
+				'title6': 'Security Question',
+				'title7': 'Terms of Service',
+				'bigText1': 'Register and find with ease the ideal correspondent to be able to make an exchange',
+				'bigText2': 'To ensure maximum security, each profile is checked and no contact information, personal information is disclosed.',
+				'bigText3': 'However if a profile seems suspicious, do not hesitate to report it.',
+				'bigText4': 'By filling out the registration form, you are committed to respecting our Philosophy. You are only allowed to create one profile.',
+				'bigText5': 'It is explicitly forbidden to create a profile for a third person.',
+				'bigText6': 'Do you already have a profile but are you having a problem ? In this case, do not try to create a new profile but contact our team. We will be happy to help you !',
+				'subTitle1': 'Your full name is visible only by our team. Your date of birth will not be displayed in the profile.',
+				'subTitle2': 'Your coordinates are visible only by our team. They do not appear in your profile',
+				'subTitle3': 'In the first box, select your mother tongue and the languages ​​you speak fluently. In the second, indicate the languages ​​of which you have some notions',
+				'subTitle4': 'Choose a password that will allow you to connect to your profile. Make sure you choose different passwords for each of your online activities.',
+				'text1': 'First name',
+				'text2': 'Last name',
+				'text3': 'Birth date',
+				'text4': 'Gender',
+				'text5': 'E-mail adress',
+				'text6': 'Confirm your e-mail adress',
+				'text7': 'Country of residence',
+				'text8': 'City',
+				'text9': 'Post code',
+				'text10': 'Your answer',
+				'text11': 'Profile creation',
+				'text12': 'Password (must contain at least 8 characters and at least one capital letter)',
+				'text13': 'Confirm password',
+				'text14': 'I have read and I accept ',
+				'text15': 'the general conditions of use ',
+				'text16': 'and the ',
+				'text17': 'general conditions of sale'
 			}
 		}
 
@@ -184,11 +213,11 @@ class PersonalInformationsFiller extends React.Component {
 					<div className='titlePersonalInformationsFiller'>{text.title7}</div>
 					<div>
 						<input type="checkbox" />
-						<label className='textPersonalInformationsFiller'>J'ai lu et j'accepte les <a className='greenText'>conditions générales d'utilisation</a> et les <a className='greenText'>conditions générales de vente</a></label>
+						<label className='textPersonalInformationsFiller'>{text.title14}<a className='greenText'>{text.title15}</a> {text.title16} <a className='greenText'>{text.title17}</a></label>
 					</div>
 				</div>
 				<div className='creationBtnContainer'>
-					<button className='CreateProfilBtn'>Création du profil</button>
+					<button className='CreateProfilBtn'>{text.text11}</button>
 				</div>
 			</div>
 		);

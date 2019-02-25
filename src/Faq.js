@@ -21,7 +21,38 @@ class Faq extends React.Component {
                 'faqSubTitle11': '11- Je viens d\'accépter un match, comment ça se passe ensuite ?',
                 'faqSubTitle12': '12- Où est-ce que je peux résilier mon abonement ?',
                 'faqSubTitle13': '13- Quand est-ce qu\'il faut que je me désabonne ?',
-                'faqSubTitle14': '14- Je n\'ai trouvé personne pour faire un échange pendant cette année d\'abonnement, comment fais-je pour profiter d\'une nouvelle année d\'abonnement gratuite ?'
+                'faqSubTitle14': '14- Je n\'ai trouvé personne pour faire un échange pendant cette année d\'abonnement, comment fais-je pour profiter d\'une nouvelle année d\'abonnement gratuite ?',
+				'text1_1': 'Une équipe se charge de valider, 1 à 1 les profils. En vérifiant la conformité des profils. Cela peut prendre jusqu\'à 48h.',
+				'text1_2': 'Pourquoi ?',
+				'text1_3': 'Pour GAOODI la sécurité est primordiale, c’est pourquoi nous demandons une pièce d’identité du jeune ainsi que d’un parent ou tuteur légal et une équipe de sécurité vérifie les identités ainsi qu’une recherche approfondie sur le parent pour être sûre de la fiabilité du profil. C’est pourquoi le profil peut mettre jusqu\'à 48 heures avant d\'être validé.',
+				'text2_1': 'Cela peut être dû à plusieurs raisons :',
+				'text2_2': '- Votre profil a été jugé suspect par l\'oganisme chargé de vérifier les profils. Nous ne donnerons pas suite à votre  inscription.',
+				'text2_3': '- Le parent qui a fourni sa pièce d’identité doit figurer sur au moins une photo que vous avez fournie sur votre profil. Il doit être identifiable.',
+				'text3_1': 'Pour donner envie à votre match probable et à sa famille il est fortement conseillé d’insérer de jolie photo de famille.',
+				'text3_2': 'Ex :',
+				'text4_1': 'Oui, si vous n\'acceptez un match pour quelque raison que ce soit, nous vous en trouverons un autre.',
+				'text5_1': 'Tout dépend de la demande, du nombre d’inscrit.',
+				'text6_1': 'Non, pas besoin de s’inquiéter. Le site vient d’ouvrir ses portes, nous devons attendre le bon match avant de vous le proposer.',
+				'text7_1': 'SI vous n’arrivez pas à accéder à la recherche de match, il se peut que votre profil n’a pas encore été validé ou que vous n’ayez pas répondu à au moins 70% des questions.',
+				'text8_1': 'Pas besoin d’aller bien loin, rendez-vous sur votre profil (même si celui-ci n’a pas encore été validé) et cliquez sur cette icone : ',
+				'text9_1': 'Seules les questions munies de ce symbole',
+				'text9_2': ' sont modifiables à tout moment dans l’espace question, cliquez sur ce même symbole',
+				'text9_3': ' en haut à droite.',
+				'text9_4': 'Les autres questions ne sont pas modifiables.',
+				'text10_1': 'Tout simplement parce qu’avec GAOODI nous fonctionnons par un système de match. Seuls les profils qui vous sont proposés sont visibles à vos yeux.',
+				'text11_1': 'Tout simplement en prenant contact via notre chat et ainsi faire connaissance et décider ensemble pour faire un échange. Libre à vous de faire comme vous le souhaitez !',
+				'text12_1': 'Allez dans « mes infos » puis « mon abonnement » et cliquez sur « Résilier ». ',
+				'text12_2': 'Vous avez deux options:',
+				'text12_3': 'Résilier -- Profil inactif',
+				'text12_4': 'Cela veut dire qu’en vous désabonnant votre profil ne sera pas supprimé de notre base de donnée, ni vos informations. Cependant votre profil ne sera plus actif, vous ne pourrez plus faire de demande de match ou communiquer avec vos amis du monde. Vous pourrez réactiver votre abonnement à tout moment.',
+				'text12_5': 'Résilier -- Profil supprimé',
+				'text12_6': 'Cela veut dire, qu’en vous désabonnant  votre profil sera définitivement supprimé de notre base de donnée, ainsi que toute vos informations. Votre profil n’existera plus et si vous voulez vous réabonner il faudra repartir de zéro.',
+				'text13_1': 'Quand vous le voulez ! Vous avez déjà payé pour une année entière à partir de la date de votre achat. En vous désabonnant, vous ne serez pas débité pour l’année d’après (par rapport à votre date d’achat).',
+				'text14_1': 'Pas de souci, vous êtes au bon endroit, il suffit de nous contacter par mail dans la rubrique « nous contacter » et de nous envoyer cette demande.',
+				'text14_2': 'Cliquez sur le raccourci de votre profil, puis tout en bas «nous contacter».',
+				'text14_3': 'Pour qu’elle soit acceptée;',
+				'text14_4': '- Vous n’avez acceptez aucune demande de match.',
+				'text14_5': '- La demande de match n’a pas abouti, c’est-à-dire que vous avez été en contact avec cette personne pendant un mois ou moins.'		
 			},
 			'en':  {
                 'faqTitle': 'FAQ- Frequently Asked Questions',
@@ -38,7 +69,38 @@ class Faq extends React.Component {
                 'faqSubTitle11': '11- I have just accepted a match, how does it go next ?',
                 'faqSubTitle12': '12- Where can I cancel my subscription ?',
                 'faqSubTitle13': '13- When do I have to unsubscribe ?',
-                'faqSubTitle14': '14- I did not find anyone to do an exchange during this year of subscription, how do I do to enjoy a new year of free subscription ?'
+				'faqSubTitle14': '14- I did not find anyone to do an exchange during this year of subscription, how do I do to enjoy a new year of free subscription ?',
+				'text1_1': 'Une équipe se charge de valider, 1 à 1 les profils. En vérifiant la conformité des profils. Cela peut prendre jusqu\'à 48h.',
+				'text1_2': 'Pourquoi ?',
+				'text1_3': 'Pour GAOODI la sécurité est primordiale, c’est pourquoi nous demandons une pièce d’identité du jeune ainsi que d’un parent ou tuteur légal et une équipe de sécurité vérifie les identités ainsi qu’une recherche approfondie sur le parent pour être sûre de la fiabilité du profil. C’est pourquoi le profil peut mettre jusqu\'à 48 heures avant d\'être validé.',
+				'text2_1': 'Cela peut être dû à plusieurs raisons :',
+				'text2_2': '- Votre profil a été jugé suspect par l\'oganisme chargé de vérifier les profils. Nous ne donnerons pas suite à votre  inscription.',
+				'text2_3': '- Le parent qui a fourni sa pièce d’identité doit figurer sur au moins une photo que vous avez fournie sur votre profil. Il doit être identifiable.',
+				'text3_1': 'Pour donner envie à votre match probable et à sa famille il est fortement conseillé d’insérer de jolie photo de famille.',
+				'text3_2': 'Ex :',
+				'text4_1': 'Oui, si vous n\'acceptez un match pour quelque raison que ce soit, nous vous en trouverons un autre.',
+				'text5_1': 'Tout dépend de la demande, du nombre d’inscrit.',
+				'text6_1': 'Non, pas besoin de s’inquiéter. Le site vient d’ouvrir ses portes, nous devons attendre le bon match avant de vous le proposer.',
+				'text7_1': 'SI vous n’arrivez pas à accéder à la recherche de match, il se peut que votre profil n’a pas encore été validé ou que vous n’ayez pas répondu à au moins 70% des questions.',
+				'text8_1': 'Pas besoin d’aller bien loin, rendez-vous sur votre profil (même si celui-ci n’a pas encore été validé) et cliquez sur cette icone : ',
+				'text9_1': 'Seules les questions munies de ce symbole',
+				'text9_2': ' sont modifiables à tout moment dans l’espace question, cliquez sur ce même symbole',
+				'text9_3': ' en haut à droite.',
+				'text9_4': 'Les autres questions ne sont pas modifiables.',
+				'text10_1': 'Tout simplement parce qu’avec GAOODI nous fonctionnons par un système de match. Seuls les profils qui vous sont proposés sont visibles à vos yeux.',
+				'text11_1': 'Tout simplement en prenant contact via notre chat et ainsi faire connaissance et décider ensemble pour faire un échange. Libre à vous de faire comme vous le souhaitez !',
+				'text12_1': 'Allez dans « mes infos » puis « mon abonnement » et cliquez sur « Résilier ». ',
+				'text12_2': 'Vous avez deux options:',
+				'text12_3': 'Résilier -- Profil inactif',
+				'text12_4': 'Cela veut dire qu’en vous désabonnant votre profil ne sera pas supprimé de notre base de donnée, ni vos informations. Cependant votre profil ne sera plus actif, vous ne pourrez plus faire de demande de match ou communiquer avec vos amis du monde. Vous pourrez réactiver votre abonnement à tout moment.',
+				'text12_5': 'Résilier -- Profil supprimé',
+				'text12_6': 'Cela veut dire, qu’en vous désabonnant  votre profil sera définitivement supprimé de notre base de donnée, ainsi que toute vos informations. Votre profil n’existera plus et si vous voulez vous réabonner il faudra repartir de zéro.',
+				'text13_1': 'Quand vous le voulez ! Vous avez déjà payé pour une année entière à partir de la date de votre achat. En vous désabonnant, vous ne serez pas débité pour l’année d’après (par rapport à votre date d’achat).',
+				'text14_1': 'Pas de souci, vous êtes au bon endroit, il suffit de nous contacter par mail dans la rubrique « nous contacter » et de nous envoyer cette demande.',
+				'text14_2': 'Cliquez sur le raccourci de votre profil, puis tout en bas «nous contacter».',
+				'text14_3': 'Pour qu’elle soit acceptée;',
+				'text14_4': '- Vous n’avez acceptez aucune demande de match.',
+				'text14_5': '- La demande de match n’a pas abouti, c’est-à-dire que vous avez été en contact avec cette personne pendant un mois ou moins.'
 			}
 		};
 
@@ -63,60 +125,59 @@ class Faq extends React.Component {
 				</div>
 				<div id='answerContainer'>
 					<h2 id='faq_1'>{fullText[this.props.locale].faqSubTitle1}</h2>
-					<p>Une équipe se charge de valider, 1 à 1 les profils. En vérifiant la conformité des profils. Cela peut prendre jusqu'à 48h.</p>
-					<h2>Pourquoi ?</h2>
-					<p>Pour GAOODI la sécurité est primordiale, c’est pourquoi nous demandons une pièce d’identité du jeune ainsi que d’un parent ou tuteur légal et une équipe de sécurité vérifie les identités ainsi qu’une recherche approfondie sur le parent pour être sûre de la fiabilité du profil. C’est pourquoi le profil peut mettre jusqu'à 48 heures avant d'être validé.</p>					
+					<p>{fullText[this.props.locale].text1_1}</p>
+					<h2>{fullText[this.props.locale].text1_2}</h2>
+					<p>{fullText[this.props.locale].text1_3}</p>
 					<h2 id='faq_2'>{fullText[this.props.locale].faqSubTitle2}</h2>
-					<p>Cela peut être dû à plusieurs raisons :</p>
-					<p>- Votre profil a été jugé suspect par l'oganisme chargé de vérifier les profils. Nous ne donnerons pas suite à votre  inscription.</p>
-					<p>- Le parent qui a fourni sa pièce d’identité doit figurer sur au moins une photo que vous avez fournie sur votre profil. Il doit être identifiable.</p>
+					<p>{fullText[this.props.locale].text2_1}</p>
+					<p>{fullText[this.props.locale].text2_2}</p>
+					<p>{fullText[this.props.locale].text2_3}</p>
 					<h2 id='faq_3'>{fullText[this.props.locale].faqSubTitle3}</h2>
-					<p>Pour donner envie à votre match probable et à sa famille il est fortement conseillé d’insérer de jolie photo de famille.</p>
-					<p>Ex :</p>
+					<p>{fullText[this.props.locale].text3_1}</p>
+					<p>{fullText[this.props.locale].text3_2}</p>
 					<div className="divImg">
 					<img src="/img/720/FAQ_Q3.jpg"/>
 					</div>
 					<h2 id='faq_4'>{fullText[this.props.locale].faqSubTitle4}</h2>
-					<p>Oui, si vous n'acceptez un match pour quelque raison que ce soit, nous vous en trouverons un autre.</p>
+					<p>{fullText[this.props.locale].text4_1}</p>
 					<h2 id='faq_5'>{fullText[this.props.locale].faqSubTitle5}</h2>
-					<p>Tout dépend de la demande, du nombre d’inscrit.</p>
+					<p>{fullText[this.props.locale].text5_1}</p>
 					<h2 id='faq_6'>{fullText[this.props.locale].faqSubTitle6}</h2>
-					<p>Non, pas besoin de s’inquiéter. Le site vient d’ouvrir ses portes, nous devons attendre le bon match avant de vous le proposer.</p>
+					<p>{fullText[this.props.locale].text6_1}</p>
 					<h2 id='faq_7'>{fullText[this.props.locale].faqSubTitle7}</h2>
-					<p>SI vous n’arrivez pas à accéder à la recherche de match, il se peut que votre profil n’a pas encore été validé ou que vous n’ayez pas répondu à au moins 70% des questions.</p>
+					<p>{fullText[this.props.locale].text7_1}</p>
 					<h2 id='faq_8'>{fullText[this.props.locale].faqSubTitle8}</h2>
-					<p>Pas besoin d’aller bien loin, rendez-vous sur votre profil (même si celui-ci n’a pas encore été validé) et cliquez sur cette icone : <img className='smallImg' src='/img/120/question.png'/></p>
-					<h2 id='faq_9'>{fullText[this.props.locale].faqSubTitle9}/h2>
-					<p>Seules les questions munies de ce symbole <img className='smallImg' src='/img/240/modif_quest_240.png'/> sont modifiables à tout moment dans l’espace question, cliquez sur ce même symbole <img className='smallImg' src='/img/120/question.png'/> en haut à droite.</p>
-					<p>Les autres questions ne sont pas modifiables.</p>
+					<p>{fullText[this.props.locale].text8_1}<img className='smallImg' src='/img/120/question.png'/></p>
+					<h2 id='faq_9'>{fullText[this.props.locale].faqSubTitle9}</h2>
+					<p>{fullText[this.props.locale].text9_1}<img className='smallImg' src='/img/240/modif_quest_240.png'/>{fullText[this.props.locale].text9_2}<img className='smallImg' src='/img/120/question.png'/>{fullText[this.props.locale].text9_3}</p>
+					<p>{fullText[this.props.locale].text9_4}</p>
 					<h2 id='faq_10'>{fullText[this.props.locale].faqSubTitle10}</h2>
-					<p>Tout simplement parce qu’avec GAOODI nous fonctionnons par un système de match. Seuls les profils qui vous sont proposés sont visibles à vos yeux.</p>
+					<p>{fullText[this.props.locale].text10_1}</p>
 					<h2 id='faq_11'>{fullText[this.props.locale].faqSubTitle11}</h2>
-					<p>Tout simplement en prenant contact via notre chat et ainsi faire connaissance et décider ensemble pour faire un échange. Libre à vous de faire comme vous le souhaitez !</p>
+					<p>{fullText[this.props.locale].text11_1}</p>
 					<h2 id='faq_12'>{fullText[this.props.locale].faqSubTitle12}</h2>
 					<div className="noMargin">
-						<p>Allez dans « mes infos » puis « mon abonnement » et cliquez sur « Résilier ». </p>
-						<p>Vous avez deux options:</p>
-						<p className="regPadLef italBold">Résilier -- Profil inactif</p>
-						<p>Cela veut dire qu’en vous désabonnant votre profil ne sera pas supprimé de notre base de donnée, ni vos informations. Cependant votre profil ne sera plus actif, vous ne pourrez plus faire de demande de match ou communiquer avec vos amis du monde. Vous pourrez réactiver votre abonnement à tout moment.</p>
-						<p className="regPadLef italBold">Résilier -- Profil supprimé</p>
-						<p>Cela veut dire, qu’en vous désabonnant  votre profil sera définitivement supprimé de notre base de donnée, ainsi que toute vos informations. Votre profil n’existera plus et si vous voulez vous réabonner il faudra repartir de zéro. </p>
+						<p>{fullText[this.props.locale].text12_1}</p>
+						<p>{fullText[this.props.locale].text12_2}</p>
+						<p className="regPadLef italBold">{fullText[this.props.locale].text12_3}</p>
+						<p>{fullText[this.props.locale].text12_4}</p>
+						<p className="regPadLef italBold">{fullText[this.props.locale].text12_5}</p>
+						<p>{fullText[this.props.locale].text12_6}</p>
 						<h2 id='faq_13'>{fullText[this.props.locale].faqSubTitle13}</h2>
-						<p>Quand vous le voulez ! Vous avez déjà payé pour une année entière à partir de la date de votre achat. En vous désabonnant, vous ne serez pas débité pour l’année d’après (par rapport à votre date d’achat).</p>
+						<p>{fullText[this.props.locale].text13_1}</p>
 					</div>
 					<h2 id='faq_14'>{fullText[this.props.locale].faqSubTitle14}</h2>
 					<div>
-						<p>Pas de souci, vous êtes au bon endroit, il suffit de nous contacter par mail dans la rubrique « nous contacter » et de nous envoyer cette demande.</p>
-						<p>Cliquez sur le raccourci de votre profil, puis tout en bas «nous contacter».</p>
-						<p>Pour qu’elle soit acceptée;</p>
-						<p className="regPadLef">- Vous n’avez acceptez aucune demande de match.</p>
-						<p className="regPadLef">- La demande de match n’a pas abouti, c’est-à-dire que vous avez été en contact avec cette personne pendant un mois ou moins.</p>
+						<p>{fullText[this.props.locale].text14_1}</p>
+						<p>{fullText[this.props.locale].text14_2}</p>
+						<p>{fullText[this.props.locale].text14_3}</p>
+						<p className="regPadLef">{fullText[this.props.locale].text14_4}</p>
+						<p className="regPadLef">{fullText[this.props.locale].text14_5}</p>
 					</div>
 				</div>
 			</div>
 		);
 	}
-
 }
 
 export default Faq;

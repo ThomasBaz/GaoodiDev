@@ -67,14 +67,35 @@ class HeadSection extends React.Component {
     }
 
 	render() {
+
+		const fullText = {
+			'fr': {
+				'title1': 'GAOODI',
+				'text1': 'Mes infos',
+				'text2': 'Mon profil',
+				'text3': 'Mes messages',
+				'text4': 'Mes amis',
+				'text5': 'Se déconnecter',
+				'text6': 'Nous contacter'
+			},
+			'en':  {
+				'title1': 'GAOODI',
+				'text1': 'Informations',
+				'text2': 'Profile',
+				'text3': 'Messages',
+				'text4': 'Friends',
+				'text5': 'Log out',
+				'text6': 'Contact us'
+			}
+		};
 		
 		let style = {
 			'display': this.state.display
-		}
+		};
 
 		let styleDropdown = {
 			'display': this.state.dropdown
-		}
+		};
 
 		let notLoggedPart = (
 			<form >
@@ -98,22 +119,22 @@ class HeadSection extends React.Component {
 					<img className="imgHeaderLogged smallProfileImg" src="http://www.nintendo-master.com/galerie/upload/data/2d341f9be827014d4af2d8a37e6cb39e.jpg" />
 					<div id="myDropdown" className="dropdown-content" style={styleDropdown}>
 						<Link className="linkNoUnderline" to="/userInfo">
-							<a>Mes infos</a>
+							<a>{fullText[this.props.locale].text1}</a>
 						</Link>
 						<Link className="linkNoUnderline" to="/profile">
-							<a>Mon profil</a>
+							<a>{fullText[this.props.locale].text2}</a>
 						</Link>
 						<Link className="linkNoUnderline" to="/messages">
-							<a>Mon messages</a>
+							<a>{fullText[this.props.locale].text3}</a>
 						</Link>
 						<Link className="linkNoUnderline" to="/">
-							<a>Mes amis</a>
+							<a>{fullText[this.props.locale].text4}</a>
 						</Link>
 						<Link to="/">
-							<a onClick={this.props.handleLoggout}>Se déconnecter</a>
+							<a onClick={this.props.handleLoggout}>{fullText[this.props.locale].text5}</a>
 						</Link>
 						<Link className="linkNoUnderline" to="/contact">
-							<a className="paddTop5">Nous contacter</a>
+							<a className="paddTop5">{fullText[this.props.locale].text6}</a>
 						</Link>
 					</div>
 				</div>
@@ -123,7 +144,7 @@ class HeadSection extends React.Component {
 		return (
 			<nav className='HeadSectionContainer'>
 				<Link className="linkNoUnderline" to="/">
-					<p>GAOODI</p>
+					<p>{fullText[this.props.locale].title1}</p>
 				</Link>
 				<div className="formContainer">
 					{this.props.isLogged ? loggedPart : notLoggedPart}

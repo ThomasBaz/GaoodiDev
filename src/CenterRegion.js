@@ -204,7 +204,7 @@ class CenterRegion extends React.Component {
 				'text2': 'Find my correspondent',
 				"text3": 'Finalize my profile'
 			}
-		}
+		};
 
 		/*let allQuestionAndAnswers = this.props.answers.map(
 			(anAnswer, index) => <QuestionForQuestionnary key={index} className="blancBtn" />
