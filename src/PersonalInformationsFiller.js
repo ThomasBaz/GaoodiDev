@@ -26,13 +26,21 @@ class PersonalInformationsMultipleChoiceLine extends React.Component {
 	}
 
 	render() {
+		const fullText = {
+			'fr': {
+				'text1': '- Séléctionner -'
+			},
+			"en": {
+				'text1': '- Select -'
+			}
+		}
 		const name = this.props.name;
 		const multSelect = this.props.multSelect;
 		let selectPart;
 		if(multSelect) {
 			selectPart = (
 				<select className="multipleChoiceQuestion" size={6} name="secureQuestions" multiple>
-  					<option value="" selected disabled hidden>- Séléctionner -</option>
+  					<option value="" selected disabled hidden>{fullText[this.props.locale].text1}</option>
 					<option value="q1">Volvo</option>
 					<option value="q2">Saab</option>
 					<option value="q3">Fiat</option>
@@ -42,7 +50,7 @@ class PersonalInformationsMultipleChoiceLine extends React.Component {
 		} else {
 			selectPart = (
 				<select className="multipleChoiceQuestion" name="secureQuestions" >
-  					<option value="" selected disabled hidden>- Séléctionner -</option>
+  					<option value="" selected disabled hidden>{fullText[this.props.locale].text1}</option>
 					<option value="q1">Volvo</option>
 					<option value="q2">Saab</option>
 					<option value="q3">Fiat</option>
