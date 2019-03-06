@@ -236,13 +236,13 @@ nav {
 	color: white;
 	font-family: 'MyriadProSemiB';
 	font-size: 15px;
-    padding: 3px;
     display: block;
 	text-decoration: none;
+	margin-bottom: 7px !important;
 }
 
 .paddTop5 {
-	padding-top: 15px !important;
+	margin-top: 8px !important;
 }
 
 /* Change color of dropdown links on hover */

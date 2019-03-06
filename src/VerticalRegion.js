@@ -10,14 +10,7 @@ class CountChip extends React.Component {
 		super(props);
 	}
 
-	render() {
-		const fullText = {
-			'fr': {
-			},
-			'en':  {
-			}
-		}
-		
+	render() {		
 		return(
 			<div className="countChipContainer">
 				{this.props.count}
@@ -107,7 +100,7 @@ class VerticalRegion extends React.Component {
 						{imgLeisures}
 					</div>
 				</div>
-				<LeasureBox display={this.state.leasureClicked} selectedLeisures={this.state.selectedLeisures} closeBox={this.handleClickLeisures} propagateLeisureChanges={this.updateChosenLeisures}/>
+				<LeasureBox locale={this.props.locale} display={this.state.leasureClicked} selectedLeisures={this.state.selectedLeisures} closeBox={this.handleClickLeisures} propagateLeisureChanges={this.updateChosenLeisures}/>
 			</div>
 		);
 	}

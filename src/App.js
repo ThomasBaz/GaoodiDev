@@ -155,14 +155,14 @@ class App extends Component {
     const modifyPassword = () => (
       <div className="AppContainer">
         <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
-        <ModifyMP />
+        <ModifyMP locale={this.state.locale} />
       </div>
     );
 
     const Contact = () => (
       <div className="AppContainer">
         <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
-        <ContactForm />
+        <ContactForm locale={this.state.locale} />
       </div>
     );
 

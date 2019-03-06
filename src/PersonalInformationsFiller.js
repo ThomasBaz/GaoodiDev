@@ -203,8 +203,8 @@ class PersonalInformationsFiller extends React.Component {
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title4}</div>
-					<PersonalInformationsMultipleChoiceLine multSelect={true} name='Choisir une question de sécurité'/>
-					<PersonalInformationsMultipleChoiceLine multSelect={true} name='Choisir une question de sécurité'/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} name='Choisir une question de sécurité'/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} name='Choisir une question de sécurité'/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title5}</div>
@@ -214,7 +214,7 @@ class PersonalInformationsFiller extends React.Component {
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title6}</div>
-					<PersonalInformationsMultipleChoiceLine multSelect={false} name='Choisir une question de sécurité'/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} name='Choisir une question de sécurité'/>
 					<PersonalInformationsStandartLine name={text.text10} value={text.text10}/>
 				</div>
 				<div className='blockInfoContainer'>

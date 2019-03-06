@@ -40,9 +40,11 @@ class ContactForm extends React.Component {
 				"text5": 'Envoyer'
 			},
 			'en':  {
-				'text1': 'Submit',
-				'text2': 'Find my correspondent',
-				"text3": 'Finalize my profile'
+				'text1': 'Contact us',
+				'text2': 'Message title',
+				"text3": 'Message',
+				"text4": 'Back',
+				"text5": 'Send'
 			}
 		};
 
