@@ -7,19 +7,43 @@ class ContactLine extends React.Component {
 		super(props);
 
 		this.state = {
+			hovered: false
 		}
+
+		this.mouseOver = this.mouseOver.bind(this);
+		this.mouseOut = this.mouseOut.bind(this);
+	}
+
+	mouseOver() {
+		this.setState({hovered: true});
+	}
+
+	mouseOut() {
+		this.setState({hovered: false});
 	}
 
 	render() {
+		if(this.props.countMsg) {
+			return(
+				<div className="aContactInMailBox" onMouseEnter={this.mouseOver} onMouseLeave={this.mouseOut}>
+					<img className="roundImg" src={this.props.imgUrl} />
+					<p>
+						{this.props.name}
+					</p>
+					<div style={{opacity: this.state.hovered ? '1' : '0.5' }} className="msgCount">{this.props.countMsg}</div>
+				</div>
+			)
+		} else {
+			return(
+				<div className="aContactInMailBox" onMouseOver={this.mouseOver}>
+					<img className="roundImg" src={this.props.imgUrl} />
+					<p>
+						{this.props.name}
+					</p>
+				</div>
+			)
+		}
 
-		return(
-			<div className="aContactInMailBox">
-				<img className="roundImg" src={this.props.imgUrl} />
-				<p>
-					{this.props.name}
-				</p>
-			</div>
-		)
 	}
 }
 
@@ -91,10 +115,10 @@ class MailBox extends React.Component {
 						{fullText[this.props.locale].text1}
 					</div>
 					<div className="MailBoxContactsContent scrollableDiv">
-						<ContactLine name={"Max la menace"} imgUrl={"https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg"} />
-						<ContactLine name={"Juju l'embrouille"} imgUrl={"http://www.nintendo-master.com/galerie/upload/data/2d341f9be827014d4af2d8a37e6cb39e.jpg"} />
-						<ContactLine name={"Nodin le coquin"} imgUrl={"https://www.pokepedia.fr/images/8/89/Salam%C3%A8che-RFVF.png"} />
-						<ContactLine name={"Tomitom moi"} imgUrl={"https://www.pokepedia.fr/images/e/ef/Bulbizarre-RFVF.png"} />
+						<ContactLine name={"Max la menace"} countMsg={1} imgUrl={"https://i.ytimg.com/vi/FG_Rxe4KQfY/hqdefault.jpg"} />
+						<ContactLine name={"Juju l'embrouille"} countMsg={0} imgUrl={"http://www.nintendo-master.com/galerie/upload/data/2d341f9be827014d4af2d8a37e6cb39e.jpg"} />
+						<ContactLine name={"Nodin le coquin"} countMsg={5} imgUrl={"https://www.pokepedia.fr/images/8/89/Salam%C3%A8che-RFVF.png"} />
+						<ContactLine name={"Tomitom moi"} countMsg={0} imgUrl={"https://www.pokepedia.fr/images/e/ef/Bulbizarre-RFVF.png"} />
 					</div>
 				</div>
 				<div className="MailBoxMessages">

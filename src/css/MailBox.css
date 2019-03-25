@@ -56,8 +56,18 @@
 	flex-direction: column;
 }
 
-.MailBoxTradContent {
-	
+.msgCount {
+	position: absolute;
+	margin-left: 220px;
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background-color: #4095d5;
+	justify-content: center;
+	padding: 3px;
+	color: white;
+	font-family: "MyriadProSemiB";
+	opacity: 0.9;
 }
 
 .aContactInMailBox {
@@ -131,7 +141,7 @@
 .messageLine {
 	border-radius: 8px;
     font-family: "KGNeatlyPrinted";
-	font-size: 15px;
+	font-size: 20px;
 	flex-wrap: wrap;
 	padding: 5px;
 	font-weight: bold;
@@ -141,7 +151,7 @@
 }
 
 .recievedMsg {
-	background-color: azure;
+	background-color: rgb(221, 221, 221);
 	align-self: flex-start;
 }
 

@@ -60,7 +60,7 @@ class ContactForm extends React.Component {
 			    </label>
 			    <div id='divContactForm'>
 						<Link to="/profile">
-				   		<button id='returnFormBtn'>{fullText[this.props.locale].text4}</button> 
+				   			<button id='returnFormBtn'>{fullText[this.props.locale].text4}</button> 
 						</Link>
 				    <input id='inputContactForm' type="submit" value={fullText[this.props.locale].text5} />
 			    </div>

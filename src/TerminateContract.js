@@ -53,22 +53,22 @@ class TerminateContract extends React.Component {
 			},
 			'en':  {
 				'definitively': {
-					'title1': 'Êtes-vous sûr de vouloir résilier définitivement votre abonnement ?',
-					'subTitle': 'Votre profil sera définitivement supprimé, vous ne pourrez plus y accéder.',
-					'text': 'Cette action résillera votre abonnement à partir dès aujourd\'hui. Nous supprimerons votre profil et vos informations de notre base de	données, de façon définitif. Vous pourrez vous réabonner à tout moment mais il faudra vous recréer un profil à partir de zéro..	ATTENTION- Vous vous êtes engagé à payer pour l\'année, vous ne serez pas remboursé pour les mois non utilisé',
-					'title2': 'Si oui, pouvez vous nous dire le motif de votre résiliement ?',
+					'title1': 'Are you sure you want to permanently cancel your subscription ?',
+					'subTitle': 'Your profile will be permanently deleted, you will not be able to access it anymore.',
+					'text': 'This action will close your subscription from today. We will delete your profile and information from our database in a definitive way. You can re-subscribe at any time but you will have to recreate a profile from scratch. ATTENTION- You have committed to pay for the year, you will not be refunded for the months not used',
+					'title2': 'If so, can you tell us the reason for your cancellation ?',
 					'yes': 'Yes',
 					'cancel': 'Cancel',
 					'submit': 'Submit'
 				}, 
 				'temporarly': {
-					'title1': 'Êtes-vous sûr de vouloir résilier votre abonnement ?',
-					'subTitle': 'Votre profil deviendra inactif, vous pourrez toutefois y accéder à tout moment.',
-					'text': 'Cette action résillera votre abonnement à partir de xxxxx. Nous garderons dans notre base de données votre profil, vous pourrez réactiver votre abonnement à tout moment sans perdre vos informations.',
-					'title2': 'Si oui, pouvez vous nous dire le motif de votre résiliement ?',
-					'yes': 'Oui',
-					'cancel': 'Annuler',
-					'submit': 'Valider'	
+					'title1': 'Are you sure you want to cancel your subscription ?',
+					'subTitle': 'Your profile will become inactive, however you can access it at any time.',
+					'text': 'This action will wipe your subscription from xxxxx. We will keep in your database your profile, you can reactivate your subscription at any time without losing your information.',
+					'title2': 'If so, can you tell us the reason for your cancellation ?',
+					'yes': 'Yes',
+					'cancel': 'Cancel',
+					'submit': 'Submit'	
 				}
 			}
 		}

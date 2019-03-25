@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/ModifyMP.css';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class ModifyMP extends React.Component {
 	constructor(props) {
@@ -60,7 +61,9 @@ class ModifyMP extends React.Component {
 					<input className='inputChangeMp' type="password" onChange={this.handleMessageChange} />
 			    </label>
 			    <div id='divContactForm'>
-				    <button id='returnMPFormBtn'>{fullText[this.props.locale].text5}</button> 
+				   	<Link to="/userInfo">
+					   <button id='returnMPFormBtn'>{fullText[this.props.locale].text5}</button>
+					</Link>
 				    <input id='inputChangeMPForm' type="submit" value={fullText[this.props.locale].text6} />
 			    </div>
 			  </form>
