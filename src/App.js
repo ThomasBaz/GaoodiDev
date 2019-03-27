@@ -15,6 +15,7 @@ import TerminateContract from './TerminateContract.js';
 import Profile from './Profile.js';
 import MailBox from './MailBox.js';
 import DestChoice from './DestChoice';
+import FinalizeRegistration from './FinalizeRegistration';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 /*const express = require('express');
@@ -173,6 +174,13 @@ class App extends Component {
       </div>
     );
 
+    const finalRegister = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <FinalizeRegistration locale={this.state.locale} />
+      </div>
+    );
+
     return (
       <Router>
         <Switch>
@@ -186,6 +194,7 @@ class App extends Component {
           <Route exact path="/terminateContract/:type" component={CloseContract} />
           <Route exact path="/modifyPassword" component={modifyPassword} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/finalizeRegistration" component={finalRegister} />
           <Route component={NoMatch} />
         </Switch>
       </Router>

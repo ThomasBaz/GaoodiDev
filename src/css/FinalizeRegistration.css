@@ -1,0 +1,159 @@
+#FinalizeRegistrationContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 50%;
+    padding-left: 25%;
+	padding-right: 25%;
+	text-align: left;
+	margin-top: 5%;
+}
+
+.FinalizeRegistrationSubContainer {
+	padding: 40px 50px 50px 40px;
+	height: auto;
+	border: solid black 1px;
+	border-radius: 6px;	
+	justify-content: center;
+}
+
+.FinalizeRegistrationSubTitle {
+	padding-bottom: 10px;
+	font-family: 'MyriadProSemiB';
+	font-size: 17px;
+	color: #565355;
+	justify-content: center;
+}
+
+#terminateMessageInput {
+	width: 100%;
+	height: 100px;
+	padding: 10px 5px 10px 5px;
+	border-width: 1px;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	border-color: #F2F5F7;
+}
+
+.FinalizeRegistrationBtn {
+	font-family: 'MyriadProSemiB';
+	font-size: 20px;
+	background: #4095d5;
+	color: #fff;
+	border-radius: 3px;
+	padding: 3px 10px 3px 10px;
+	border: 1px solid #4095d5;
+	cursor: pointer;
+	justify-content: flex-end;
+}
+
+.FinalizeRegistrationBtn:hover {
+	background: #fff;
+	color: #4095d5;
+	border: 1px solid #4095d5;
+}
+
+.FinalizeRegistrationBtnWrapper {
+	padding-bottom: 20px;
+	padding-right: 30%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.FinalizeRegistrationUpContainer {
+	padding-right: 20%;
+	padding-bottom: 30px;
+}
+
+.FinalizeRegistrationBtnWrapper2 {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.FinalizeRegistrationTitle {
+	padding-bottom: 5px;
+	font-family: 'MyriadProSemiB';
+	font-size: 22px;
+	color: #565355;
+}
+
+.FinalizeRegistrationText {
+	padding: 10px;
+	font-family: 'MyriadProReg';
+	font-size: 15px;
+	color: #b1b1b6;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.greyBorderRadius {
+	border: solid #b1b1b6 1px;
+	border-radius: 3px;
+}
+
+.FinalizeRegistrationBtnLine {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	align-items: baseline;
+}
+
+.FinalizeRegistrationLine {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.marginSides {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.whiteBtn {
+	border: solid #b1b1b6 1px;
+	border-radius: 3px;
+	padding: 5px 20px 5px 20px;
+	background-color: white;
+	color: #b1b1b6;
+}
+
+.whiteBtn:hover {
+	background-color: #b1b1b6;
+	color: white;
+}
+
+.blueBtn {
+	border: solid #b1b1b6 1px;
+	font-family: 'MyriadProSemiB';
+	font-size: 17px;
+	border-radius: 3px;
+	background-color: #4095d5;
+	padding: 10px;
+	color: white;
+}
+
+.fontRegSmall {
+	font-family: 'MyriadProReg';
+	font-size: 14px;
+	color: #97979c;
+}
+
+.fontSemiBMedium {
+	font-family: 'MyriadProSemiB';
+	font-size: 17px;
+	color: #565355;
+}
+
+.blueBtn:hover {
+	background-color: white;
+	color: #4095d5;
+}
+
+.smallIcon {
+	height: 25px;
+	margin-left: 5px;
+}
