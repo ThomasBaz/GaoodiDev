@@ -4,7 +4,8 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-	transition: 0.5s;
+  transition: 0.5s;
+  min-width: 1000px;
 }
 
 /* On ajoute des transitions */
@@ -70,7 +71,7 @@
   position: absolute;
   font-family: "MyriadProSemiB";
   color: #686666;
-  font-size: 25px;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   z-index: 2;
   bottom: 0px;
   left: 45%;
