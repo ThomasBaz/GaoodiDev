@@ -65,11 +65,17 @@ class FinalizeRegistration extends React.Component {
 					<div className="greyBorderRadius">
 						<div className="FinalizeRegistrationBtnLine marginSides">
 							<div className='fontRegSmall'>{fullText[this.props.locale].text2}</div>
-							<button className="greyBorderRadius whiteBtn">{fullText[this.props.locale].text4}</button>
+							<label for="file-upload1" class="greyBorderRadius whiteBtn">
+								{fullText[this.props.locale].text4}
+							</label>
+							<input id="file-upload1" type="file"/>
 						</div>
 						<div className="FinalizeRegistrationBtnLine marginSides">
 							<div className='fontRegSmall'>{fullText[this.props.locale].text3}</div>
-							<button className="greyBorderRadius whiteBtn">{fullText[this.props.locale].text4}</button>
+							<label for="file-upload2" class="greyBorderRadius whiteBtn">
+								{fullText[this.props.locale].text4}
+							</label>
+							<input id="file-upload2" type="file"/>
 						</div>
 					</div>
 					<div className="FinalizeRegistrationBtnLine">

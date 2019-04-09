@@ -157,3 +157,7 @@
 	height: 25px;
 	margin-left: 5px;
 }
+
+input[type="file"] {
+    display: none;
+}
