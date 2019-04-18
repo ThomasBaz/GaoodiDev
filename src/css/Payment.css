@@ -1,8 +1,119 @@
 .PaymentContainer {
-    display: flex;
+    background-color: rgb(238, 238, 238);
+    height: 100vh;
     width: 100%;
-    background-color: #f0f2f2;
-    border-radius: 2px;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+}
+
+.PaymentBox {
+    background-color: white;
+    color: black;
+    display: flex;
+    text-align: left;
+    margin: auto;
+    width: 75%;
+    flex-direction: row;
+    min-height: 400px;
+    z-index: 1;
+    padding: 25px;
+    width: 65%;
+}
+
+.PaymentArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.PaymentSummary {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    margin-left: 10px;
+    width: 40%;
+}
+
+.PaymentVerticalDelimiter {
+    width: inherit;
+    height: 2px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: rgb(230, 230, 230);
+    z-index: 2;
+    width: 90%;
+}
+
+.PaymentTitle {
+    font-family: 'MyriadPro';
+    font-size: 32px;
+    color: rgb(29, 53, 85);
+    font-weight: bold;
+    width: 95%;
+}
+
+.PaymentText {
+    font-family: 'MyriadProReg';
+    font-size: 20px;
+    color: rgb(29, 53, 85);
+}
+
+.PaymentSmallText {
+    font-family: 'MyriadProReg';
+    font-size: 13px;
+    color: rgb(29, 53, 85);
+}
+
+.randomText {
+    font-family: 'MyriadProReg';
+    font-size: 20px;
+    color: rgb(49, 64, 85);
+    margin-left: 35px;
+}
+
+.PaymentV {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 35px;
+}
+
+.flexEnd {
+    text-align: end;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.PaymentV img {
+    height: 20px;
+}
+
+#btnPaypal {
+
+}
+
+#verticalDelimiter {
+    height: inherit;
+    width: 3px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgb(230, 230, 230);
+    z-index: 2;
+}
+
+.smallPaddingTop {
+    padding-top: 10px;
+}
+
+.mediumPaddingTop {
+    padding-top: 25px;
+}
+
+.largePaddingTop {
+    padding-top: 40px;
+}
+
+.PaymentHorizontalDelimiter {
+
 }

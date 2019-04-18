@@ -16,6 +16,7 @@ import Profile from './Profile.js';
 import MailBox from './MailBox.js';
 import DestChoice from './DestChoice';
 import FinalizeRegistration from './FinalizeRegistration';
+import Payment from './Payment';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 /*const express = require('express');
@@ -181,6 +182,13 @@ class App extends Component {
       </div>
     );
 
+    const payment = () => (
+      <div className="AppContainer">
+        <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
+        <Payment locale={this.state.locale} />
+      </div>
+    );
+
     return (
       <Router>
         <Switch>
@@ -195,6 +203,7 @@ class App extends Component {
           <Route exact path="/modifyPassword" component={modifyPassword} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/finalizeRegistration" component={finalRegister} />
+          <Route exact path="/payment" component={payment} />
           <Route component={NoMatch} />
         </Switch>
       </Router>

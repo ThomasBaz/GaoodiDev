@@ -40,7 +40,8 @@ class Payment extends React.Component {
 				"text15": "CVV",
 				"text16": "Payer par carte de crédit",
 				"text17": "Sécurisation SSL",
-				"text18": "Payer avec"
+				"text18": "Payer avec",
+				"text19": "Ou"
 			},
 			'en': {
 				"title1": "An annual subscription at a single price",
@@ -62,19 +63,43 @@ class Payment extends React.Component {
 				"text15": "CVV",
 				"text16": "Pay by credit card",
 				"text17": "SSL securing",
-				"text18": "Pay with"
+				"text18": "Pay with",
+				"text19": "Or"
 			}
 		}
 
 		return(
 			<div className="PaymentContainer">
-				<div className="PaymentArea">
-				<div className="PaymentTitle">{fullText[this.props.locale].title1}</div>
-				<div className="PaymentText">{fullText[this.props.locale].text1}</div>
-				<button id="btnPaypal">{fullText[this.props.locale].text18}</button>
-				</div>
-				<div className="PaymentSummary">
-					
+				<div className="PaymentBox">
+					<div className="PaymentArea">
+						<div className="PaymentTitle">{fullText[this.props.locale].title1}</div>
+						<div className="PaymentText mediumPaddingTop">{fullText[this.props.locale].text1}</div>
+						<button id="btnPaypal">{fullText[this.props.locale].text18}</button>
+						<div className="PaymentHorizontalDelimiter"></div>
+					</div>
+					<div id="verticalDelimiter"/>
+					<div className="PaymentSummary">
+						<div className="PaymentTitle textCenter">{fullText[this.props.locale].title2}</div>
+						<div className="PaymentSmallText textCenter smallPaddingTop">{fullText[this.props.locale].text2}</div>
+						<div className="randomText largePaddingTop">{fullText[this.props.locale].text3}</div>
+						<div className="PaymentV mediumPaddingTop">
+							<img src="/img/240/verifié_240.png"/>
+							<div className="PaymentText">{fullText[this.props.locale].text4}</div>
+						</div>
+						<div className="PaymentV">
+							<img src="/img/240/verifié_240.png"/>
+							<div className="PaymentText">{fullText[this.props.locale].text5}</div>
+						</div>
+						<div className="PaymentV">
+							<img src="/img/240/verifié_240.png"/>
+							<div className="PaymentText">{fullText[this.props.locale].text6}</div>
+						</div>
+						<div className="PaymentVerticalDelimiter"></div>
+						<div className="PaymentV smallPaddingTop">
+							<div className="PaymentTitle">{fullText[this.props.locale].text7}</div>
+							<div className="PaymentTitle flexEnd">{fullText[this.props.locale].text8}</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
