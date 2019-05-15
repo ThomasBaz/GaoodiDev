@@ -89,8 +89,62 @@
     height: 20px;
 }
 
-#btnPaypal {
+.CodePromo {
+    padding-top: 5vh;
+    text-align: right;
+}
 
+.CodePromo input {
+    padding: 3px;
+    border: solid 1px rgb(197, 197, 197);
+    border-radius: 3px;
+}
+
+.TitleMiddleAndLine {
+    font-family: 'MyriadProSemiB';
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    -webkit-box-shadow: 0 15px 0 0 #fff inset, 0 17px 0 0 silver inset;
+    box-shadow: 0 15px 0 0 #fff inset, 0 17px 0 0 silver inset;
+    margin-right: 10px;
+}
+
+.TitleMiddleAndLine span {
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'MyriadProSemiB';
+    font-size: 15px;
+    color: rgb(121, 121, 121);
+}
+
+#btnPaypal {
+    display: flex;
+    padding: 7px;
+    border: solid 1px rgb(252, 141, 51);
+    background-color:  rgb(252, 141, 51);
+    border-radius: 7px;
+    color: white;
+    font-family: 'MyriadPro';
+    font-size: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#btnPaypal:hover {
+    border: solid 1px rgb(255, 181, 121);
+    background-color:  rgb(255, 181, 121);
+}
+
+#btnPaypal img {
+    margin-left: 10px;
+    height: 30px;
 }
 
 #verticalDelimiter {
@@ -112,6 +166,18 @@
 
 .largePaddingTop {
     padding-top: 40px;
+}
+
+.smallMarginTop {
+    margin-top: 10px;
+}
+
+.mediumMarginTop {
+    margin-top: 25px;
+}
+
+.largeMarginTop {
+    margin-top: 40px;
 }
 
 .PaymentHorizontalDelimiter {

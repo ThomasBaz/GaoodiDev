@@ -74,8 +74,15 @@ class Payment extends React.Component {
 					<div className="PaymentArea">
 						<div className="PaymentTitle">{fullText[this.props.locale].title1}</div>
 						<div className="PaymentText mediumPaddingTop">{fullText[this.props.locale].text1}</div>
-						<button id="btnPaypal">{fullText[this.props.locale].text18}</button>
-						<div className="PaymentHorizontalDelimiter"></div>
+						<button id="btnPaypal">
+							{fullText[this.props.locale].text18}
+							<img src="/img/150/Paypal_2007_logo.svg_-1.png" />
+							</button>
+						<div className="smallMarginTop TitleMiddleAndLine">
+							<span>
+								{fullText[this.props.locale].text19}
+							</span>
+						</div>
 					</div>
 					<div id="verticalDelimiter"/>
 					<div className="PaymentSummary">
@@ -94,10 +101,16 @@ class Payment extends React.Component {
 							<img src="/img/240/verifié_240.png"/>
 							<div className="PaymentText">{fullText[this.props.locale].text6}</div>
 						</div>
-						<div className="PaymentVerticalDelimiter"></div>
+						<div className="mediumMarginTop PaymentVerticalDelimiter"></div>
 						<div className="PaymentV smallPaddingTop">
 							<div className="PaymentTitle">{fullText[this.props.locale].text7}</div>
 							<div className="PaymentTitle flexEnd">{fullText[this.props.locale].text8}</div>
+						</div>
+						<div className="CodePromo">
+							{fullText[this.props.locale].text9}
+							<div>
+								<input type="text" />
+							</div>
 						</div>
 					</div>
 				</div>
