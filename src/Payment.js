@@ -18,7 +18,8 @@ class Payment extends React.Component {
 	}
 
 	render() {
-
+		var today = new Date(Date.now());
+		var currYear = today.getFullYear();
 		const fullText = {
 			'fr': {
 				"title1": "Un abonnement annuel à prix unique",
@@ -34,7 +35,7 @@ class Payment extends React.Component {
 				"text9": "Code promo",
 				"text10": "J'ai lu et j'accepte les ",
 				"text11": "conditions générales de vente",
-				"text12": "Carte de crédit",
+				"text12": "Carte de crédit :",
 				"text13": "Numéro de carte de crédit",
 				"text14": "Date d'expiration",
 				"text15": "CVV",
@@ -55,9 +56,9 @@ class Payment extends React.Component {
 				"text7": "TOTAL",
 				"text8": "150 $",
 				"text9": "Promo code",
-				"text10": "I have read and I accept",
-				"text11": "Terms of Sales",
-				"text12": "Credit card",
+				"text10": "I have read and I accept the ",
+				"text11": "terms of Sales",
+				"text12": "Credit card :",
 				"text13": "Credit Card Number",
 				"text14": "Expiration date",
 				"text15": "CVV",
@@ -82,6 +83,58 @@ class Payment extends React.Component {
 							<span>
 								{fullText[this.props.locale].text19}
 							</span>
+						</div>
+						<div className="PaymentText">
+							{fullText[this.props.locale].text12}
+						</div>
+						<div className="cardInfos mediumPaddingTop PaymentSmallText">
+							<div className="flexColumn thirdPercent smallPaddingRight">
+								{fullText[this.props.locale].text13}
+								<input type="text" />
+							</div>
+							<div className="flexColumn fifteenPercent smallPaddingRight">
+								{fullText[this.props.locale].text14}
+								<div className="flexRow">
+									<select>
+										<option value="jan">01</option>
+										<option value="feb">02</option>
+										<option value="mar">03</option>
+										<option value="apr">04</option>
+										<option value="may">05</option>
+										<option value="jun">06</option>
+										<option value="jul">07</option>
+										<option value="aug">08</option>
+										<option value="sep">09</option>
+										<option value="oct">10</option>
+										<option value="nov">11</option>
+										<option value="dec">12</option>
+									</select>
+									<select>
+										<option value={currYear}>{currYear}</option>
+										<option value={currYear+1}>{currYear+1}</option>
+										<option value={currYear+2}>{currYear+2}</option>
+										<option value={currYear+3}>{currYear+3}</option>
+										<option value={currYear+4}>{currYear+4}</option>
+										<option value={currYear+5}>{currYear+5}</option>
+									</select>
+								</div>
+							</div>
+							<div className="flexColumn thirdPercent">
+								{fullText[this.props.locale].text15}
+								<input type="texts" id="cvv"></input>
+							</div>
+						</div>
+						<div className="PaymentText">
+							<button className="PaymentContainerBtn">
+								{fullText[this.props.locale].text16}
+							</button>
+						</div>
+						<div className="mediumPaddingTop">
+							<input type="checkbox" id="agreedConditions" name="agreedConditions"/>
+							{fullText[this.props.locale].text10}
+							<a href="" className="acceptTerms" >
+								{fullText[this.props.locale].text11}
+							</a>
 						</div>
 					</div>
 					<div id="verticalDelimiter"/>
