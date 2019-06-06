@@ -143,7 +143,7 @@ class App extends Component {
     const Destination = () => (
       <div className="AppContainer">
         <HeadSection handleLocaleChangeToFr={this.handleLocaleChangeToFr} handleLoggout={this.handleLoggout} handleLoggin={this.handleLoggin} handleLocaleChangeToEng={this.handleLocaleChangeToEng} text={fullText2[this.state.locale]} locale={this.state.locale} isLogged={this.state.logged}/>
-        <DestChoice countryInfos={[{url: '/img/1080/CANADA_1080.png', name: 'CANADA'}, {url: '/img/1080/FRANCE_1080.png', name: 'FRANCE'}, {url: '/img/1080/USA_1080.png', name: 'USA'}, {url: '/img/1080/Belgique_1080.png', name: 'BELGIQUE'}]} locale={this.state.locale}/>
+        <DestChoice countryInfos={[{url: '/img/1080/CANADA_1080.png', name: 'CANADA'}, {url: '/img/1080/Angleterre_1080_v2.jpg', name: 'ANGLETERRE'},{url: '/img/1080/FRANCE_1080.png', name: 'FRANCE'}, {url: '/img/1080/USA_1080.png', name: 'USA'}, {url: '/img/1080/Belgique_1080.png', name: 'BELGIQUE'}, {url: '/img/1080/australie01_1080_v02.jpg', name: 'AUSTRALIE'}]} locale={this.state.locale}/>
       </div>
     );
 
