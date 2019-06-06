@@ -160,7 +160,7 @@ class DestImg extends React.Component {
         return (
 			<div onClick={this.props.setActive} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} className='DestImgContainer'>
                 <img className={this.props.active?'DestImgSelected':'DestImgContainerImg'} src={this.props.imgUrl}/>
-                <div className={this.props.active?'centeredTextSelected':'centeredText'}>{this.props.country}</div>
+                <div className={this.props.active?'centeredTextSelected':'centeredText'}>{this.props.active?(this.props.choiceIndex + ' : ' + this.props.country):(this.props.country)}</div>
 			</div>
 		);
 	}
@@ -171,7 +171,7 @@ class DestChoice extends React.Component {
 		super(props);
 
 		this.state = {
-            activeCountry: null,
+            activeCountryArray: [],
             from: 13,
             to: 25,
             lang: null,
@@ -187,7 +187,26 @@ class DestChoice extends React.Component {
 	}
 
     setActive(event) {
-        this.setState({activeCountry: event.target.parentElement.children[1].innerText});
+        let currentValue = event.target.parentElement.children[1].innerText;
+        if(currentValue.includes(': ')) {
+            currentValue = currentValue.split(': ')[1];
+        }
+        let index = this.state.activeCountryArray.indexOf(currentValue);
+        if(index !== -1) {
+            let newArray = [];
+            this.state.activeCountryArray.forEach(function(elem, i) {
+                if(index !== i) {
+                    newArray.push(elem);
+                }
+            });
+            this.setState({
+                activeCountryArray: newArray
+            });
+        } else {
+            this.setState({
+                activeCountryArray: [...this.state.activeCountryArray, currentValue]
+            });
+        }
     }
     
     handleMinSelectChange(event) {
@@ -199,7 +218,7 @@ class DestChoice extends React.Component {
     }
     
     submitDestAndAge() {
-        console.log('Selected country :' + this.state.activeCountry + ', from ' + this.state.from + ' to ' + this.state.to + ' yo');
+        console.log('Selected country :' + this.state.activeCountryArray + ', from ' + this.state.from + ' to ' + this.state.to + ' yo');
         console.log('Language wished :' + this.state.lang);
         console.log('Gender wished :' + this.state.gender);
     }
@@ -215,7 +234,7 @@ class DestChoice extends React.Component {
 	render() {
 		const fullText = {
 			'fr': {
-                'title': 'Choisis ta Destination',
+                'title': 'Choisis ta Destination dans l\'ordre de tes préférences (au moins 3 choix)',
                 'text1': 'Je souhaite un correspondant...',
                 'text2': 'entre',
                 'text3': 'et',
@@ -223,7 +242,7 @@ class DestChoice extends React.Component {
                 'btnText': 'C\'est partit !'
 			},
 			'en':  {
-                'title': 'Choose your Destination',
+                'title': 'Choose your Destination by order of preference',
                 'text1': 'I wish someone...',
                 'text2': 'between',
                 'text3': 'and',
@@ -232,12 +251,12 @@ class DestChoice extends React.Component {
 			}
         }
 
-        let activeCountry = this.state.activeCountry;
+        let activeCountryArray = this.state.activeCountryArray;
         let funcSetActive = this.setActive;
-        
         let images = this.props.countryInfos.map(function(aCountyInfos, index) {
-            if(activeCountry == aCountyInfos.name) {
-                return <DestImg active={true} setActive={funcSetActive} key={index} imgUrl={aCountyInfos.url} country={aCountyInfos.name}/>
+            let countryActiveIndex = activeCountryArray.indexOf(aCountyInfos.name);
+            if(countryActiveIndex != -1) {
+                return <DestImg active={true} choiceIndex={countryActiveIndex+1} setActive={funcSetActive} key={index} imgUrl={aCountyInfos.url} country={aCountyInfos.name}/>
             } else {
                 return <DestImg active={false} setActive={funcSetActive} key={index} imgUrl={aCountyInfos.url} country={aCountyInfos.name}/>
             }
@@ -246,7 +265,9 @@ class DestChoice extends React.Component {
 		return (
 			<div className='DestChoiceContainer'>
                 {fullText[this.props.locale].title}
-                {images}
+                <div className='DestContainerForImg'>
+                    {images}
+                </div>
                 <div className='ageChoiceContainer'>
                     {fullText[this.props.locale].text1}
                     <div className='ageChoiceLine'>

@@ -23,10 +23,19 @@
 }
 
 .DestImgContainerImg {
-    width: 100%;
     z-index: 1;
     -webkit-filter: brightness(100%);
-	filter: brightness(100%);
+    filter: brightness(100%);
+    object-fit: cover;
+    height: 400px;
+    width: inherit;
+}
+
+.DestContainerForImg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .DestImgContainer {
@@ -35,6 +44,9 @@
     padding-bottom: 5px;
     cursor: pointer;
     font-size: 30px;
+    max-width: 50%;
+    max-height: 400px;
+    overflow: hidden;
 }
 
 .centeredText {
@@ -65,10 +77,12 @@
 }
 
 .DestImgSelected {
-    width: 100%;
+    width: inherit;
     z-index: 1;
     -webkit-filter: brightness(30%);
-	filter: brightness(30%);
+    filter: brightness(30%);
+    object-fit: cover;
+    height: 400px;
 }
 
 .DestImgUnselected {
