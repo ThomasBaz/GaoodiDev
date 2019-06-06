@@ -90,12 +90,12 @@ class Payment extends React.Component {
 						<div className="cardInfos mediumPaddingTop PaymentSmallText">
 							<div className="flexColumn thirdPercent smallPaddingRight">
 								{fullText[this.props.locale].text13}
-								<input type="text" />
+								<input className="inputCC" type="text" />
 							</div>
 							<div className="flexColumn fifteenPercent smallPaddingRight">
 								{fullText[this.props.locale].text14}
 								<div className="flexRow">
-									<select>
+									<select class="selectDate">
 										<option value="jan">01</option>
 										<option value="feb">02</option>
 										<option value="mar">03</option>
@@ -109,7 +109,7 @@ class Payment extends React.Component {
 										<option value="nov">11</option>
 										<option value="dec">12</option>
 									</select>
-									<select>
+									<select class="selectDate">
 										<option value={currYear}>{currYear}</option>
 										<option value={currYear+1}>{currYear+1}</option>
 										<option value={currYear+2}>{currYear+2}</option>
@@ -121,7 +121,7 @@ class Payment extends React.Component {
 							</div>
 							<div className="flexColumn thirdPercent">
 								{fullText[this.props.locale].text15}
-								<input type="texts" id="cvv"></input>
+								<input className="inputCC" type="texts" id="cvv"></input>
 							</div>
 						</div>
 						<div className="PaymentText">
@@ -130,11 +130,16 @@ class Payment extends React.Component {
 							</button>
 						</div>
 						<div className="mediumPaddingTop">
+							<div class="checkbox">
+								<input type="checkbox" id="agreedConditions"/>
+								<label for="agreedConditions">
+									{fullText[this.props.locale].text10}
+									<a href="" className="acceptTerms" >
+										{fullText[this.props.locale].text11}
+									</a>
+								</label>
+							</div>
 							<input type="checkbox" id="agreedConditions" name="agreedConditions"/>
-							{fullText[this.props.locale].text10}
-							<a href="" className="acceptTerms" >
-								{fullText[this.props.locale].text11}
-							</a>
 						</div>
 					</div>
 					<div id="verticalDelimiter"/>
