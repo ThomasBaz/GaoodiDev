@@ -71,6 +71,11 @@
     color: white;
 }
 
+.centeredTextSelected:hover {
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+
+
 .DestImgContainerImg:hover {
     -webkit-filter: brightness(30%);
 	filter: brightness(30%);
