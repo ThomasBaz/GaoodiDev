@@ -37,24 +37,23 @@ class PersonalInformationsMultipleChoiceLine extends React.Component {
 		const name = this.props.name;
 		const multSelect = this.props.multSelect;
 		let selectPart;
+
+		const choices = this.props.choices.map(
+			(aChoice, index) =><option value={aChoice} key={index}>{aChoice}</option>
+		);
+
 		if(multSelect) {
 			selectPart = (
 				<select className="multipleChoiceQuestion" size={6} name="secureQuestions" multiple>
   					<option value="" selected disabled hidden>{fullText[this.props.locale].text1}</option>
-					<option value="q1">Volvo</option>
-					<option value="q2">Saab</option>
-					<option value="q3">Fiat</option>
-					<option value="q4">Audi</option>
+					{choices}
 				</select>
 			);
 		} else {
 			selectPart = (
 				<select className="multipleChoiceQuestion" name="secureQuestions" >
   					<option value="" selected disabled hidden>{fullText[this.props.locale].text1}</option>
-					<option value="q1">Volvo</option>
-					<option value="q2">Saab</option>
-					<option value="q3">Fiat</option>
-					<option value="q4">Audi</option>
+					{choices}
 				</select>
 			);
 		}
@@ -132,7 +131,63 @@ class PersonalInformationsFiller extends React.Component {
 				'text14': 'J\'ai lu et j\'accepte les ',
 				'text15': 'conditions générales d\'utilisation ',
 				'text16': 'et les ',
-				'text17': 'conditions générales de vente'
+				'text17': 'conditions générales de vente',
+				'text18': 'Je parle courament (y compris ma langue maternelle)',
+				'text19': 'J\'ai des connaissances de bases de',
+				'text20': 'Choisir une question de sécurité',
+				'countries': [
+					'France',
+					'Canada',
+					'Angleterre',
+					'USA',
+					'Belgique',
+					'Australie'
+				],
+				'languages' : [
+					"Chinois Mandarin",
+					"Espanol",
+					"Anglais",
+					"Hindi / ourdou",
+					"Arabe",
+					"Bengali",
+					"Portugais",
+					"Russe",
+					"Japonais",
+					"Allemand",
+					"Javanais",
+					"Punjabi",
+					"Wu",
+					"Français",
+					"Telugu",
+					"Vietnamien",
+					"Marathi",
+					"Coréen",
+					"Tamil",
+					"Italien",
+					"Turc",
+					"Cantonais / yue"
+				],
+				"questions":  [
+					"Comment s'appelait votre meilleur ami lorsque vous étiez adolescent ?",
+					"Comment s'appelait votre premier animal de compagnie ?",
+					"Quel est le premier plat que vous avez appris à cuisiner ?",
+					"Quel est le premier film que vous avez vu au cinéma ?",
+					"Où êtes-vous allé la première fois que vous avez pris l'avion ?",
+					"Comment s'appelait votre instituteur préféré à l'école primaire ?",
+					"Quel serait selon vous le métier idéal ?",
+					"Quel est le livre pour enfants que vous préférez ?",
+					"Quel était le modèle de votre premier véhicule ?",
+					"Quel était votre surnom lorsque vous étiez enfant ?",
+					"Quel était votre personnage ou acteur de cinéma préféré lorsque vous étiez étudiant ?",
+					"Quel était votre chanteur ou groupe préféré lorsque vous étiez étudiant ?",
+					"Dans quelle ville vos parents se sont-ils rencontrés ?",
+					"Comment s'appelait votre premier patron ?",
+					"Quel est le nom de la rue où vous avez grandi ?",
+					"Quel est le nom de la première plage où vous vous êtes baigné ?",
+					"Quel est le premier album que vous avez acheté ?",
+					"Quel est le nom de votre équipe de sport préférée ?",
+					"Quel était le métier de votre grand-père ?"
+				]
 			},
 			'en':  {
 				'title1': 'General Information',
@@ -168,7 +223,63 @@ class PersonalInformationsFiller extends React.Component {
 				'text14': 'I have read and I accept ',
 				'text15': 'the general conditions of use ',
 				'text16': 'and the ',
-				'text17': 'general conditions of sale'
+				'text17': 'general conditions of sale',
+				'text18': 'I speak fluently (including my mother tongue)',
+				'text19': 'I have basic knowledge of',
+				'text20': 'Choose a security question',
+				'countries': [
+					'France',
+					'Canada',
+					'England',
+					'USA',
+					'Belgium',
+					'Australia'
+				],
+				'languages' :  [
+					"Mandarin Chinese",
+					"Spanish",
+					"English",
+					"Hindi/Urdu",
+					"Arabic",
+					"Bengali",
+					"Portuguese",
+					"Russian",
+					"Japanese",
+					"German",
+					"Javanese",
+					"Punjabi",
+					"Wu",
+					"French",
+					"Telugu",
+					"Vietnamese",
+					"Marathi",
+					"Korean",
+					"Tamil",
+					"Italian",
+					"Turkish",
+					"Cantonese/Yue"
+				],
+				"questions":  [
+					"What was your best friend's name when you were a teenager?",
+					"What was your first pet name?",
+					"What's the first dish you've learned to cook?",
+					"What is the first film you saw at the cinema?",
+					"Where did you go the first time you flew?",
+					"What was your favorite teacher's name in primary school?",
+					"What would be the ideal job for you?",
+					"Which children's book do you prefer?",
+					"What was the model of your first vehicle?",
+					"What was your nickname when you were a child?",
+					"What was your favorite character or movie actor when you were a student?",
+					"What was your favorite singer or band when you were a student?",
+					"In which city did your parents meet?",
+					"What was your first boss's name?",
+					"What is the name of the street where you grew up?",
+					"What is the name of the first beach where you bathed?",
+					"What is the first album you bought?",
+					"What is the name of your favorite sports team?",
+					"What was your grandfather's job?"
+				]
 			}
 		}
 
@@ -198,13 +309,14 @@ class PersonalInformationsFiller extends React.Component {
 					<PersonalInformationsStandartLine name={text.text5} value={text.text5}/>
 					<PersonalInformationsStandartLine name={text.text6} value={text.text6}/>
 					<PersonalInformationsStandartLine name={text.text7} value={text.text7}/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} choices={text.countries} name={text.text7}/>
 					<PersonalInformationsStandartLine name={text.text8} value={text.text8}/>
 					<PersonalInformationsStandartLine name={text.text9} value={text.text9}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title4}</div>
-					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} name='Choisir une question de sécurité'/>
-					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} name='Choisir une question de sécurité'/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} choices={text.languages} name={text.text18}/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} choices={text.languages} name={text.text19}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title5}</div>
@@ -214,14 +326,14 @@ class PersonalInformationsFiller extends React.Component {
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title6}</div>
-					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} name='Choisir une question de sécurité'/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} choices={text.questions} name={text.text20}/>
 					<PersonalInformationsStandartLine name={text.text10} value={text.text10}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title7}</div>
 					<div>
 						<input type="checkbox" />
-						<label className='textPersonalInformationsFiller'>{text.title14}<a className='greenText'>{text.title15}</a> {text.title16} <a className='greenText'>{text.title17}</a></label>
+						<label className='textPersonalInformationsFiller'>{text.text14}<a className='greenText'>{text.text15}</a> {text.text16} <a className='greenText'>{text.text17}</a></label>
 					</div>
 				</div>
 				<div className='creationBtnContainer'>
