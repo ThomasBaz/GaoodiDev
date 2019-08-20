@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import FacebookConnectButton from './FacebookConnectButton.js';
 import './css/FormSection.css';
 import './css/font.css';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 
 class FormSection extends React.Component {
@@ -48,7 +47,9 @@ class FormSection extends React.Component {
 
         // Prevent default so the default form submission doesn't
         // get triggered.
-        e.preventDefault();
+		e.preventDefault();
+		// ToDo navigate to /newProfile avec les infos déjà renseignées de remplies
+		//history.push('/newProfile');
     }
 
 	render() {

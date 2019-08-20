@@ -26,6 +26,8 @@ class PersonalInformations extends React.Component {
 		super(props);
 	}
 
+
+
 	render() {
 		/*const generalInfos = this.props.generalInfos;
 		const contactInfos = this.props.contactInfos;

@@ -5,16 +5,32 @@ import './css/PersonalInformations.css';
 class PersonalInformationsStandartLine extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			'value': ''
+		}
+		
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(e) {
+        this.setState({value: e.target.value});
+	}
+	
+	componentDidMount() {
+		if(this.props.value && (this.props.value != "")) {
+			this.setState({value: this.props.value});
+		}
 	}
 
 	render() {
 		const name = this.props.name;
-		const value = this.props.value;
+		const placeholder = this.props.placeholder;
 
 		return(
 			<div className='PersonalInformationsStandartLine'>
 				<div className='textPersonalInformationsFiller'>{name} *</div>
-				<input type='text' className="inputChangeMp" placeholder={value}/>
+				<input type='text' className="inputChangeMp" value={this.state.value} placeholder={placeholder} onChange={this.handleChange}/>
 			</div>
 		);
 	};
@@ -23,6 +39,33 @@ class PersonalInformationsStandartLine extends React.Component {
 class PersonalInformationsMultipleChoiceLine extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			'values': []
+		}
+		
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(e) {
+		e.preventDefault();
+		let clickedValue = e.target.value;
+		let index = this.state.values.indexOf(clickedValue);
+		let newVal = [];
+		if(index != -1) {
+			for(var i in this.state.values) {
+				if(i != index) newVal.push(this.state.values[i]);
+			}
+		} else {
+			newVal = [...this.state.values, clickedValue];
+		}
+		this.setState({'values': newVal});
+	}
+	
+	componentDidMount() {
+		if(this.props.value && (this.props.value != "")) {
+			this.setState({'values': this.props.values});
+		}
 	}
 
 	render() {
@@ -36,26 +79,45 @@ class PersonalInformationsMultipleChoiceLine extends React.Component {
 		}
 		const name = this.props.name;
 		const multSelect = this.props.multSelect;
+		let values = this.state.values;
 		let selectPart;
 
 		const choices = this.props.choices.map(
-			(aChoice, index) =><option value={aChoice} key={index}>{aChoice}</option>
+			function(aChoice, index) {
+				return(<option value={aChoice} key={index}>{aChoice}</option>);
+			}
 		);
 
-		if(multSelect) {
-			selectPart = (
-				<select className="multipleChoiceQuestion" size={6} name="secureQuestions" multiple>
-  					<option value="" selected disabled hidden>{fullText[this.props.locale].text1}</option>
-					{choices}
-				</select>
-			);
+		if(!values || (values.length == 0)) {
+			if(multSelect) {
+				selectPart = (
+					<select className="multipleChoiceQuestion" size={6} name="secureQuestions" onClick={this.handleChange} multiple>
+						  <option value="" selected disabled hidden>{fullText[this.props.locale].text1}</option>
+						{choices}
+					</select>
+				);
+			} else {
+				selectPart = (
+					<select className="multipleChoiceQuestion" name="secureQuestions" onClick={this.handleChange}>
+						  <option value="" selected disabled hidden>{fullText[this.props.locale].text1}</option>
+						{choices}
+					</select>
+				);
+			}
 		} else {
-			selectPart = (
-				<select className="multipleChoiceQuestion" name="secureQuestions" >
-  					<option value="" selected disabled hidden>{fullText[this.props.locale].text1}</option>
-					{choices}
-				</select>
-			);
+			if(multSelect) {
+				selectPart = (
+					<select value={this.state.values} className="multipleChoiceQuestion" size={6} name="secureQuestions" onClick={this.handleChange} multiple>
+						{choices}
+					</select>
+				);
+			} else {
+				selectPart = (
+					<select value={this.state.values} className="multipleChoiceQuestion" name="secureQuestions" onClick={this.handleChange} >
+						{choices}
+					</select>
+				);
+			}
 		}
 
 		return(
@@ -70,16 +132,31 @@ class PersonalInformationsMultipleChoiceLine extends React.Component {
 class PersonalInformationsMpLine extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			'value': ''
+		}
+		
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(e) {
+        this.setState({value: e.target.value});
+	}
+	
+	componentDidMount() {
+		if(this.props.value && (this.props.value != "")) {
+			this.setState({value: this.props.value});
+		}
 	}
 
 	render() {
 		const name = this.props.name;
-		const value = this.props.value;
 
 		return(
 			<div className='PersonalInformationsMpLine'>
 				<div className='textPersonalInformationsFiller'>{name} *</div>
-				<input type='password' className="inputChangeMp"/>
+				<input type='password' className="inputChangeMp" value={this.state.value} onChange={this.handleChange}/>
 			</div>
 		);
 	};
@@ -95,6 +172,27 @@ class PersonalInformationsFiller extends React.Component {
 	}
 
 	render() {
+		let defaultValues = {
+			"firstName": "",
+			"lastName": "",
+			"birthDate": "",
+			"gender": "",
+			"E-mail": "",
+			"country": "",
+			"city": "",
+			"postCode": "",
+			"password": "",
+			"languages1": "",
+			"languages2": "",
+			"securityQuestion": "",
+			"securityAnswer": ""
+		};
+
+		if(this.props.existingValues) {
+			for(var aName in this.props.existingValues) {
+				defaultValues[aName] = this.props.existingValues[aName];
+			}
+		}
 
 		const fullText = {
 			'fr': {
@@ -142,6 +240,10 @@ class PersonalInformationsFiller extends React.Component {
 					'USA',
 					'Belgique',
 					'Australie'
+				],
+				'genders': [
+					'Homme',
+					'Femme'
 				],
 				'languages' : [
 					"Chinois Mandarin",
@@ -235,6 +337,10 @@ class PersonalInformationsFiller extends React.Component {
 					'Belgium',
 					'Australia'
 				],
+				'genders': [
+					'Boy',
+					'Girl'
+				],
 				'languages' :  [
 					"Mandarin Chinese",
 					"Spanish",
@@ -300,34 +406,34 @@ class PersonalInformationsFiller extends React.Component {
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title2}</div>
 					<div className='subTitlePersonalInformationsFiller'>{text.subTitle1}</div>
-					<PersonalInformationsStandartLine name={text.text1} value={text.text1}/>
-					<PersonalInformationsStandartLine name={text.text2} value={text.text2}/>
+					<PersonalInformationsStandartLine name={text.text1} placeholder={text.text1} value={defaultValues["firstName"]}/>
+					<PersonalInformationsStandartLine name={text.text2} placeholder={text.text2} value={defaultValues["lastName"]}/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} choices={text.genders} name={text.text4} value={defaultValues["gender"]}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title3}</div>
 					<div className='subTitlePersonalInformationsFiller'>{text.subTitle2}</div>
-					<PersonalInformationsStandartLine name={text.text5} value={text.text5}/>
-					<PersonalInformationsStandartLine name={text.text6} value={text.text6}/>
-					<PersonalInformationsStandartLine name={text.text7} value={text.text7}/>
-					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} choices={text.countries} name={text.text7}/>
-					<PersonalInformationsStandartLine name={text.text8} value={text.text8}/>
-					<PersonalInformationsStandartLine name={text.text9} value={text.text9}/>
+					<PersonalInformationsStandartLine name={text.text5} placeholder={text.text5} value={defaultValues["E-mail"]}/>
+					<PersonalInformationsStandartLine name={text.text6} placeholder={text.text6}/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} choices={text.countries} name={text.text7} value={defaultValues["country"]}/>
+					<PersonalInformationsStandartLine name={text.text8} placeholder={text.text8} value={defaultValues["city"]}/>
+					<PersonalInformationsStandartLine name={text.text9} placeholder={text.text9} value={defaultValues["postCode"]}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title4}</div>
-					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} choices={text.languages} name={text.text18}/>
-					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} choices={text.languages} name={text.text19}/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} choices={text.languages} name={text.text18} value={defaultValues["languages1"]}/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={true} choices={text.languages} name={text.text19} value={defaultValues["languages2"]}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title5}</div>
 					<div className='subTitlePersonalInformationsFiller'>{text.subTitle4}</div>
-					<PersonalInformationsMpLine name={text.text12} value={text.text12}/>
-					<PersonalInformationsMpLine name={text.text13} value={text.text13}/>
+					<PersonalInformationsMpLine name={text.text12} placeholder={text.text12} value={defaultValues["password"]}/>
+					<PersonalInformationsMpLine name={text.text13} placeholder={text.text13}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title6}</div>
-					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} choices={text.questions} name={text.text20}/>
-					<PersonalInformationsStandartLine name={text.text10} value={text.text10}/>
+					<PersonalInformationsMultipleChoiceLine locale={this.props.locale} multSelect={false} choices={text.questions} name={text.text20} value={defaultValues["securityQuestion"]}/>
+					<PersonalInformationsStandartLine name={text.text10} placeholder={text.text10} value={defaultValues["securityAnswer"]}/>
 				</div>
 				<div className='blockInfoContainer'>
 					<div className='titlePersonalInformationsFiller'>{text.title7}</div>
